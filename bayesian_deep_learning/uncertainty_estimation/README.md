@@ -78,13 +78,9 @@ Aún no se ha realizado ningún experimento.
 
 
 ### 3 - [Regresión cuantílica](quantile_regression/README.md)
-La regresión cuantílica nos permite hacer una predicción que cubra 
+La regresión cuantílica nos permite hacer una predicción sobre un cuantíl concreto de la distribución de la variable respuesta. Este método nos permite estimar los valores de predicción en los extremos de la distribución, ofreciendo un intervalo de error en la predicción que usamos como medida de incertidumbre. 
 
-La regresión cuantílica permite obtener diferentes estimaciones para diferentes escenarios (cuantiles) dentro del mismo dataset (TODO: esto es no decir nada).
-
-(TODO: unificar carpetas)
-(TODO: series temporales (pronóstico o "forecasting"): LSTM y deep quantile regression)
-(Meter documentación lstm/README.md donde corresponta, en su experimento o donde se explique).
+Por ejemplo, si predecimos los cuantiles de orden 0.10 y 0.90 obtendriamos los valores extremos que recogen el 80% de las observaciones de la variable respuesta. Si ponemos el ejemplo del precio de una acción en bolsa y obtenemos los valores de 200$ y 250$ para los cuantiles 0.10 y 0.90 podremos saber que cómo mucho la variabilidad es de 50$ en el 80% de los casos.
 
 #### Experimentos
 
