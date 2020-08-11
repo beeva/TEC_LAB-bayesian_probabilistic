@@ -20,7 +20,7 @@ En está página se explica UMAL como **solución técnica para estimar la incer
 <a name="introduccion"></a>
 ## Introducción a UMAL
 
-**UMAL (Uncountable Mixture Asymetric Laplacian)** es una técnica bayesiana que perimte estimar la incertidumbre aleatórica [heterocesdástica](#heterocesdástica) de las predicciones P(Y|X) *sin necesidad de conocimiento previo* de cómo se modela esta incertidumbre. Esta técnica es *capaz de modelar caraceterísticas complejas de las distribuciones* (e.g. asimétrias, multimodalidades), adaptandose mejor a la distribucción real de las mismas y *ofreciendo información relevante en escenarios de alta incertidumbre*. Para resolver esta problemática se ha decidido tomar como referencia el trabajo realizado por Axel Brando de la técnica [UMAL](https://arxiv.org/abs/1910.12288) [a local copy exists](umal_v1.pdf)
+**UMAL (Uncountable Mixture Asymetric Laplacian)** es una técnica bayesiana que permite estimar la incertidumbre aleatórica [heterocesdástica](#heterocesdástica) de las predicciones P(Y|X) *sin necesidad de conocimiento previo* de cómo se modela esta incertidumbre. Esta técnica es *capaz de modelar caraceterísticas complejas de las distribuciones* (e.g. asimétrias, multimodalidades), adaptandose mejor a la distribucción real de las mismas y *ofreciendo información relevante en escenarios de alta incertidumbre*
 
 <a name="umal_problematica"></a>
 ## ¿Qué problemática resuelve UMAL?
@@ -36,22 +36,7 @@ Este tipo asunciones hace que sea **dificil modelizar la inceridumbre aleatóric
 
 En la fig.2 se muestra un problema de regresión con unos datos sintéticos cuya distribucción de Y varia a lo largo del eje X por zonas. Estas zonas son generadas con distintos procesos generadores que modelan distintas distribucciones de probabilidad, en este caso de los tipos: asimétrica, simétrica, uniforme, multimodal. Estas variaciones a lo largo del eje X hace que el tipo de incertidumbre a modelar sea del tipo <a name="heterocesdástica"> *heterocedástica*, ya que la variabilidad de la Y en función de la X no se mantiene constante </a>. 
 
-Además, si nos fijamos en un input de X concreto, pongamos X1 = 0.6 vemos que <a name="heterogénea"> el tipo de distribucción de Y puede presentar varias modas, es decir, la varianza de la distribucción de Y es del tipo *heterogénea* </a>.
-
-<a name="tecnicas-en-las-que-se-basa"></a>
-**Tecnicas en las que se basa**
-La técnica de UMAL se basa en las siguientes técnicas, por lo que es interesante conocerlas antes de introducirse en UMAL:
-
-* [Regresión Cuantílica](/poc_forecasting_uncertainty/techniques/quantile_regression/) cómo método para la estimación de la incertidumbre aleatórica
-* [LSTM](/poc_forecasting_uncertainty/techniques/lstm/) como baseline de referencia para realizar inferencias en problemas de forecasting con suficientes datos
-
-
-<a name="Consideraciones-previas-de-esta-aproximacion"></a>
-**Consideraciones previas de esta aproximación**
-
-* Asumimos un escenario con sufientes datos, por tanto:
-  * Se puede tomar un modelo de Deep Learning tipo LSTM como baseline
-  * Al contar con suficientes datos la incertidumbre por aproximación (underfitting) e incertidumbre epistémica se consideran despreciables y nos centramos en la aleatórica
+Además, si nos fijamos en un input de X concreto, pongamos X1 = 0.6 vemos que <a name="heterogénea"> el tipo de distribucción de Y puede presentar varias modas, es decir, la varianza de la distribucción de Y es del tipo *heterogénea* </a>
 
 
 <a name="comparacion_tecnicas"></a>

@@ -40,7 +40,7 @@ En esta fórmula los parámetros tiene la siguiente semántica:
 
 El algoritmo de MLE o máxima verosimilitud nos permite obtener los parámetros del modelo o distribución que maximizan la probabibilidad de obtener unos datos dados.
 
-Referencia - [Ejemplo de cálculo de MLE para la implementación de la función de pérdida](https://d3c33hcgiwev3.cloudfront.net/_f678abd2f50f7171a76c7cb3ec03f726_MLE-for-Gaussian.pdf?Expires=1594252800&Signature=lDPX5Y6JT03mRyNj65JYEMZ7gjQuP5oXy-7019GmL8e8VuYRLo07K-N1iGU3geREMr1xj-VwjEh4qsV4R~PDQRpQuoH~UvEnrlpC3NyCzlgd1vcAKFQkppHqMXWsLDSg8HLu796cvDiu0R8bKy24ppHRdF4dta7sJCb3tvF8P8c_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
+Referencia - [Ejemplo de cálculo de MLE para la implementación de la función de pérdida](https://towardsdatascience.com/maximum-likelihood-estimation-explained-normal-distribution-6207b322e47f#:~:text=%E2%80%9CA%20method%20of%20estimating%20the,observed%20data%20is%20most%20probable.%E2%80%9D&text=Let's%20say%20we%20have%20some,that%20it%20is%20normally%20distributed.)
 
 
 ### Aplicaciones
