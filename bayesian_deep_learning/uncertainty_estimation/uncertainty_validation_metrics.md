@@ -1,90 +1,50 @@
-# Validación y métricas de estimación de la incertidumbre
+# Metodología de validación 
+
+En los siguientes puntos se resume el conjunto de prácticas aplicadas para la correcta evaluación de los resultados obtenidos en los experimentos realizados y las razones por las que se han aplicado dichas prácticas.
+
+1) **Generación de datos sintéticos**: En la mayoría de los experimentos realizados se ha obtado por la generación de datos mediante distintas funciones de regresión y la addición de ruido de distinta índole
+
+    *¿Por qué es importante trabajar con datos sintéticos?*
+
+    En la práctica es dificil construir datasets reales que cubran toda la variabilidad intrínseca de un problema para poder validar si se está cubriendo distintos tipo de incertidumbre
+
+    Por ejemplo, en la problemática de vehículos autónomos, probablemente estaríamos interesados en un dataset de imágenes anotadas que cubra oclusiones, distintos niveles de profundidad y condiciones ambientales adversas. Sin embargo, la obtención de este tipo de datasets suele suponer un esfuerzo muy alto que en la mayoría de los casos las empresas privadas protegen cómo un activo más de valor de la misma.
+
+    *Nota: En concreto, en esta problemática se pueden encontrar algunos datasets de referencia como Raincouver que incluye condiciones ambientales adversas pero tiene muy pocos ejemplos o Berkeley Deep Drive que aunque cuenta con 5683 imágenes anotadas, se ha visto que presenta inconsistencias en las etiquetas*
+
+2) **Selección de una medida común**: Es necesario establecer una medida de incertidumbre común que permita comparar e interpretar resultados. En esta línea se ha visto que las más utilizadas son **la varianza o RMSE en regresión** y **la entropía o cross-entropy en clasificación**
 
 
-En esta página se pretende hacer una revisión del estado del arte de los siguientes puntos:
+* **Métricas complementarias de validación**: En la validación de la incertidumbre se ha visto que además de las métricas RMSE o cross-entropy es necesario utilizar otros métodos de validación complementarios por las restricciones que estas dos anteriores imponen (e.g. RMSE asume que los datos siguen distribución gausiana). En este sentido destacan los siguientes métodos:
 
-* [Medidas y/o interpretación de incertidumbre](#medidas)
-* [Métricas de validación o scoring de la incertidumbre](#metricas)
-* [Baselines y benchmarks de referencia](#benchmarks)
+    * **Regressión**:
 
+        * [Negative Log-Likelihood](https://medium.com/deeplearningmadeeasy/negative-log-likelihood-6bd79b55d8b6)
 
-### Contexto 
+    * **Clasificación**: 
+        * [Classical Reliability Diagrams](https://towardsdatascience.com/introduction-to-reliability-diagrams-for-probability-calibration-ed785b3f5d44)
 
-Es necesario realizar esta revisión en los siguientes puntos:
+        * [Relative entropy (KL Divergence)](https://machinelearningmastery.com/cross-entropy-for-machine-learning/)
 
-* Encontrar unas medidas de incertidumbre que sean fácilmente interpretables
-* Entender los motivos de la elección de una medida de incertidumbre u otra
-* Establecer una metodología de validación de la calidad que nos sirva para comparar distintas técnicas
-* Establecer un baseline (o modelo de referencia) como punto de partida para realizar la comparativa
-
-El **objetivo** que se persigue es:
-
-Extraer una **metodología para comparar distintas técnicas**. Dar unas pautas en la elección de la medida de incertidumbre o técnica a usar
-
-<a name="medidas"></a>
-### Medidas e interpretación de la incertidumbre
-
-En Medidas de Incertidumbre e Interpretación se exponen las medidas de incertidumbre comúnmente utilizadas tanto para la definición de la función de pérdida como para validar la calidad de medición de la incertidumbre. 
-
-Se ha visto que para problemas de regresión se utiliza la varianza o RMSE y para problemas de clasificación la entropía o cross-entropy. 
-
-Las posibles variaciones y/o adaptaciones en el uso e interpretación de las medidas de incertidumbre dependen principalmente de la aplicación o caso de uso de esta con los siguientes criterios:
-
-* **Selección del prior** (e.g. se utiliza una distribución de partida que se cree que se puede ajustar mejor al problema)
-* **Aproximación de la función de pérdida** (e.g. variational bayes, laplace approximation)
-
-*Referencias*
-
-[1] https://towardsdatascience.com/bayesian-deep-learning-with-fastai-how-not-to-be-uncertain-about-your-uncertainty-6a99d1aa686e
-
-[2] https://arxiv.org/pdf/1803.08533.pdf
+        * [Brier Score](https://statisticaloddsandends.wordpress.com/2019/12/29/what-is-a-brier-score/)
 
 
-    
-<a name="metricas"></a>
-### Métricas de Validación o Scoring 
+3) **Validación con un juego de datasets reales**: Además de los métodos expuestos anteriormente es importante tener un juego de datasets reales de distinta índole que permita evaluar y comparar  su utilidad en distintos escenarios. En este sentido se ha seleccionado el [dataset de precios de casas de Boston](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_boston.html)  íncluido en la librería de scikit-learn y el dataset de [Kaggle M5 Forecasting Uncertainty](https://www.kaggle.com/c/m5-forecasting-uncertainty) de precios de producto propuesto por los supermercados Wallmart
 
-En Métricas de Validación o Scoring se ha hecho una revisión de las métricas utilizadas para validar la calidad de las estimaciones de incertidumbre.
+* **Comparación con baselines o modelos de referencia**: En este punto destacan los siguientes modelos y benchmarks de referencia:
 
-Se ha visto que la más utilizadas son RMSE (regresión) y NLL (Negative Log-Likelihood). Es de especial importancia utilizar las dos debido a las restricciones que RMSE impone en cuanto al tipo de distribución (gaussiana)
+    * **Modelos de referencia**:
+        * [MonteCarlo Dropout](https://medium.com/@ahmdtaha/dropout-as-a-bayesian-approximation-representing-model-uncertainty-in-deep-learning-7a2e49e64a15)
+        * [Variational Inference](https://medium.com/@jonathan_hui/machine-learning-variational-inference-273d8e6480bb)
+        * [DeepEnsembles](https://arxiv.org/abs/1912.02757)
 
-Se han extraído algunas ideas para la validación de calidad o scoring:
+    * **Benchmarks de referencia**: 
 
-* Generación de ejemplos adversarios 
-* Cross Validation 
-* Eliminación recursiva de predicciones que superen un cierto nivel de incertidumbre K
+        * [Mukhoti, J., Stenetorp, P., & Gal, Y. (2018). On the Importance of Strong Baselines in Bayesian Deep Learning. (Vi), 1–4](http://arxiv.org/abs/1811.09385)
 
-Métricas de Calibración
+        * *Lakshminarayanan, B., Pritzel, A., & Blundell, C. (2017). Simple and scalable predictive uncertainty estimation using deep ensembles. Advances in Neural Information Processing Systems, 2017-Decem(Nips), 6403–6414*
 
-* Brier Score
-* Classical Reliability Diagrams
-* Expected Calibration Error (ECE) 
-
-Se ha visto que también es importante los siguientes aspectos:
-
-* Asegurar una buena calibración del modelo.
-* Tener un juego de datasets reales con diferentes características
-
-*Referencias*
-
-[3] https://arxiv.org/pdf/1307.5928.pdf
-
-<a name="benchmarks"></a>
-### Benchmarks de referencia
-
-Se han extraído 3 benchmarks de referencia 
-Se han extraído datasets reales de referencia para construir un conjunto de pruebas
-Se han extraído los siguientes modelos de referencia:
-* MonteCarlo Dropout
-* Variational Inference
-* DeepEnsembles
+        * [Filos, A., Farquhar, S., Gomez, A. N., Rudner, T. G. J., Kenton, Z., Smith, L., … Gal, Y. (2019). A Systematic Comparison of Bayesian Deep Learning Robustness in Diabetic Retinopathy Tasks. (NeurIPS), 1–12](http://arxiv.org/abs/1912.10481)
 
 
-***Referencia**: On the Importance of Strong Baselines in Bayesian Deep Learning*
-![](img/image9.png)
 
-***Referencia**: Lakshminarayanan, B., Pritzel, A., & Blundell, C. (2017). Simple and scalable predictive uncertainty estimation using deep ensembles. Advances in Neural Information Processing Systems, 2017-Decem(Nips), 6403–6414*
-![](img/image10.png)
-
-***Referencia**: Filos, A., Farquhar, S., Gomez, A. N., Rudner, T. G. J., Kenton, Z., Smith, L., … Gal, Y. (2019). A Systematic Comparison of Bayesian Deep Learning Robustness in Diabetic Retinopathy Tasks. (NeurIPS), 1–12. Retrieved from http://arxiv.org/abs/1912.10481*
-![](img/image1.png)
