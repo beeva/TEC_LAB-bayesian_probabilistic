@@ -28,9 +28,9 @@ Tenemos un modelo que predice la temperatura en grados centígrados ºC:
 El modelo predice 5. Conocemos la predicción pero no cómo de fiable es.
 
 #### Visión bayesiana
-El modelo predice una [distribución normal](https://es.wikipedia.org/wiki/Distribuci%C3%B3n_normal) con media 5 y desviación típica de 1.0. El 68% de la probabilidad está entre 4.5 y 5.5 o que el 99,7% está entre 3.5 y 6.5. Es decir, seguro que hace frío ya que la variabilidad es poca.
+El modelo predice una [distribución normal](https://es.wikipedia.org/wiki/Distribuci%C3%B3n_normal) con media 5 y desviación típica de 0.5. El 68% de la probabilidad está entre 4.5 y 5.5 o que el 99,7% está entre 3.5 y 6.5. Es decir, seguro que hace frío ya que la variabilidad es poca.
 
-El modelo predice una distribución normal con media 5ºC y desviación típica de 20.0.Tenemos una variabilidad de +-10ºC el 68% de las veces, es decir, entre -5ºC y 15ºC, la diferencia entre un día duro de invierno y uno agradable de primavera. El 99.7% de las veces, estaríamos en +-25%, una predicción bastante mala.
+El modelo predice una distribución normal con media 5ºC y desviación típica de 10.0.Tenemos una variabilidad de +-10ºC el 68% de las veces, es decir, entre -5ºC y 15ºC, la diferencia entre un día duro de invierno y uno agradable de primavera. El 99.7% de las veces, estaríamos en +-25%, una predicción bastante mala.
 
 
 ## Referencias

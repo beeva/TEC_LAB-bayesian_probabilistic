@@ -1,14 +1,15 @@
 # Estimación de la Incertidumbre 
 
-El reto de la estimación de la incertidumbre tiene como objetivo ofrecer una **medida de fiabilidad** sobre las predicciones de un modelo de "deep learning".
+La estimación de la incertidumbre tiene como objetivo ofrecer una **medida de fiabilidad** de las predicciones de un modelo de "deep learning".  Conocer el margen de error en las predicciones de un modelo es interesante en escenarios con alta incertidumbre y donde hay que evaluar riesgos para tomar decisiones. 
 
-Esto es importante para poder **cuantificar el margen de error cometido en las predicciones** de un modelo en escenarios con **alta incertidumbre**. 
+Un ejemplo lo podemos encontrar en la predicción de ventas de producto, donde surgen cuestiones con alta incertidumbre como: _¿cuántos elementos X vamos a vender el mes que viene?_ Ser capaces de dar una estimación, por ejemplo 50,  con un margen de error (bajo +-4 o alto +-30) nos ayudará a diseñar eficientes campañas de ventas y evitar costes innecesarios.
 
-Un ejemplo de este escenario lo podemos ver en [problemas de predicción de ventas de producto](/umal/poc_forecasting_uncertainty) en los que se plantean cuestiones con alta incertidumbre como ¿Cuántos equipamentos de acampada vamos a vender el mes que viene? Ser capaces de dar una estimación de por ejemplo 50 equipamentos con un margen de error bajo (e.g. +-4) o alto (e.g. +-30) nos podría ayudar a optimizar mejor las campañas de ventas y evitar costes innecesarios
+También es interesante Esta solución es de especial importancia de acuerdo a las directrices publicadas por comisión europea en 2018 de [Inteligencia Artificial Confiable](https://github.com/beeva/TEC_LAB-Trustworthy_AI) que responde a la necesidad de industria de construir IA segura con una visión 'human-centric' 
+
 
 ## Contexto y alcance del reto
 
-El **reto de la estimación de la incertidumbre tiene como objetivo** desarrollar técnicas de inteligencia artificial que, además de realizar su cometido, ofrezcan **una medida de fiabilidad de lo bueno que es su resultado**. Esta solución es de especial importancia de acuerdo a las directrices publicadas por comisión europea en 2018 de [Inteligencia Artificial Confiable](https://github.com/beeva/TEC_LAB-Trustworthy_AI) que responde a la necesidad de industria de construir IA segura con una visión 'human-centric' 
+El **reto de la estimación de la incertidumbre tiene como objetivo** desarrollar técnicas de inteligencia artificial que, además de realizar su cometido, ofrezcan **una medida de fiabilidad de lo bueno que es su resultado**. 
 
 ## Aproximación de la línea
 
@@ -49,63 +50,63 @@ Manejamos esta taxonomía para caraterizar los elementos que afectan al reto:
 ## Técnicas y experimentos
 
 ### 1 - [Al vuelo](on-the-fly/README.md)
-La técnica de estimación del error al vuelo es nuestro punto de entrada al reto y consiste en añadir una salida más a nuestra red neuronal para que haga una estimación del error de predicción.
+La técnica de estimación del error al vuelo es nuestro punto de entrada al reto y consiste en añadir (antes de entrenar) una salida más a nuestra red neuronal para que haga una estimación del error de predicción.
 
-* Pytorch
+Aunque los experimentos proporcionan un buen fundamento teórico de cómo aproximar el reto, los resultados desaconsejan usar esta técnica, en favor de otras que se ven a continuación. El principal problema viene de mezclar predicción y estimación del error de dicha predicción en el mismo proceso de aprendizaje, lo que trae problemas en el entrenamiento y dificulta la explicación del modelo al mezclar hipótesis.
 
-* TensorFlow
+#### Experimentos (Pytorch)
+Experimento original y pruebas derivadas del mismo.
 
-#### TF - 01-original-on_the_fly
+#### Experimentos (TensorFlow)
+Reimplementación en TensorFlow y pruebas exhaustivas.
+
+**TF - 01-original-on_the_fly** (TODO: revisión)
 * FECHA: 07/07/2020
 * DESCRIPCIÓN: reimplementación del experimento original con la librería Tensorflow 2.0.
 * RECURSOS:
-  * [Notebook](on-the-fly/01-original-on_the_fly-tf.ipynb)
+  * [Notebook](on-the-fly/tf/01-original-on_the_fly-tf.ipynb)
 
 
-### 2 - Dos pasos (TODO)
+### 2 - Dos pasos
+Comprendida la inconveniencia de estimar el error al vuelo y de las modificaciones sobre el proceso habitual de creación de un modelo, se propone hacerlo en dos pasos. Se parte de un modelo ya entrenado y se propone crear otro que estime su error de predicción.
+
+#### Experimentos
+Aún no se ha realizado ningún experimento.
+
 
 ### 3 - [Regresión cuantílica](quantile_regression/README.md)
-* Introducción
-* LSTM  y pronóstico
+La regresión cuantílica nos permite hacer una predicción que cubra 
 
-### 4 - [Redes de densidad mixta](mixture_density_networks/README.md)
+La regresión cuantílica permite obtener diferentes estimaciones para diferentes escenarios (cuantiles) dentro del mismo dataset (TODO: esto es no decir nada).
+
+(TODO: unificar carpetas)
+(TODO: series temporales (pronóstico o "forecasting"): LSTM y deep quantile regression)
+(Meter documentación lstm/README.md donde corresponta, en su experimento o donde se explique).
+
+#### Experimentos
+
+
+### 4 - [Modelos de mixturas](mixture_density_networks/README.md)
+
+
 
 ### 5 - [UMAL - Uncountable Mixture Asymetric Laplacian](umal/README.md)
-* Introducción
-* Implementacíón
-* Caso real: Kaggle - M5 dataset
+La técnica [UMAL (Uncountable Mixture Asymetric Laplacian)](https://arxiv.org/abs/1910.12288) permite hacer predicciones en series temporales multimodales sin tener conocimiento previo sobre las distribuciones de los datos ni de sus errores. Es decir, podemos obtener una distribución de probabilidad de la predicción por cada punto sin presuponer la forma que tiene.
+
+UMAL es una técnica a la que llegamos 
+
+#### Experimentos
+
+** Introducción
+** Implementación
+** Caso real: Kaggle - M5 dataset
 
 
+---
+(TODO:
 _NOTA: completar con la [lista de experimentos](https://raw.githubusercontent.com/beeva/TEC_LAB-bayesian_probabilistic/f8b30546cc2d2e216336c864568813f9ed5fcfff/labs_experiments/README.md)_
+)
 
----
-
-
-## Listado de técnicas exploradas
-
-Para la estimación de la incertidumbre, tras un comienzo con técnicas más sencillas, se ha orientado el trabajo hacia la técnica de [UMAL](https://arxiv.org/abs/1910.12288), profundizando en las técnicas en las que se basa.
-
-
--   [Técnica: Exp.I - Estimacion de la varianza al vuelo](on-the-fly/README.md)
-    Esta técnica es muy simple de implementar y, aunque a servido para profundizar en el conocimiento, adolece de muchas delibidades que no la hace apta para su uso en producción
-
- 
--   [Técnica: Regresión Cuantílica](quantile_regression/README.md) 
-    La técnica de regresión cuantílica permite obtener diferentes estimaciones para diferentes escenarios (cuantiles) dentro del mismo dataset 
--   [Técnica: LSTM](lstm/README.md) 
-    Las redes LSTM son una técnica de deep learning que permiten la predicción en series temporales
-
--   [Técnica: DeepQuantile LSTM](deepquantile_lstm/README.md)
-    Utilizando la regresión cuantílica, y utilizando los diferentes resultados como entrada de redes LSTM, podemos hacer estimaciones de serie de temporales en diferentes escenarios
-
--   [Técnica: Redes de densidad mixta](mixture_density_networks/README.md)
-    Son un tipo de redes que permiten utilizar redes neuronales convencionales con un modelo probabilístico que permite representar la presencia de sub-poblaciones dentro de la población general 
-
--   [Técnica: UMAL](umal/README.md)
-    La técnica UMAL (Uncountable Mixture Asymetric Laplacian) permite hacer predicciones en series temporales multimodales, sin tener conocimiento previo sobre las distribuciones de los datos ni de sus errores
-	
-	
----
 
 ## Referencias
 
