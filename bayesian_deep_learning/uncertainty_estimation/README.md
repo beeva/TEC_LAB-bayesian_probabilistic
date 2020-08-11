@@ -28,7 +28,6 @@ En esta línea se hará foco en **la estadística bayesiana** cómo una solució
 * [Profundización en la problemática de estimación de la incertidumbre](uncertainty_estimation_problem.md)
 * [Validación y métricas de estimación de la incertidumbre](uncertainty_validation_metrics.md)
 * [Listado de técnicas exploradas](#listado-tecnicas-exploradas)
-* [Proximos pasos](uncertainty_estimation_next_steps.md)
 
 ---
 
