@@ -1,4 +1,4 @@
-# Deep Quantile LSTM
+# Forecasting con LSTM y regresión cuantílica: Deep Quantile LSTM
 
 En este apartado se incluyen los aprendizajes de la combinación de las técnicas de [quantile regresión](../README.md) y [LSTM](../lstm/README.md) para resolver problemas de forecasting
 

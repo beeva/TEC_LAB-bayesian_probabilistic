@@ -8,10 +8,12 @@ En está página se explica la regresión cuantílica como solución técnica pa
 - [Implementación de la regresión cuantílica](#implementacion)
   - [Técnicas de regresión cuantílica](#tecnicas)
   - [Validación - Función de pérdida](#validacion)
-- [Aplicaciones de la regresión cuantílica](#aplicaciones)
-  - [Estimación de la incertumbre en Forecasting](#implementacion)
+
+- [Estimación de la incertumbre en Forecasting](#implementacion)
     - [¿Por que utilizar intervalos de predicción o cuantiles en Forecasting?](#forecast-incertidumbre)
-    - [Forecasting con LSTM](./deepquantile_lstm/README.md)
+    - [Forecasting con LSTM y regresión cuantílica](./deepquantile_lstm/README.md)
+
+- [Otras aplicaciones de la regresión cuantílica](#aplicaciones)
 
 <a name="introduccion"></a>
 ## Introducción
