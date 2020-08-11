@@ -31,13 +31,79 @@ Hemos identificado estas dimensiones para describir la incertidumbre:
 
 ## Técnicas y experimentos
 
+### 0 - [Técnicas Frecuentistas]
+La estimación de la incertidumbre se puede realizar mediante técnicas frecuentistas. Estas técnicas tienen unas límitaciones respecto a las técnicas bayesianas. El objetivo de los experimentos incluidos aqui es realizar un recopilatorio de técnicas existentes y analizar las ventajas y desventajas respecto a las técnicas bayesianas.
+
+**V1.0.0-nonbayesian_techniques** (TODO: revisión)
+* DATE: 03/12/2019
+* EXPERIMENT-TECHNIQUE: Non bayesian techniques for uncertainty estimation in ML
+* DATASET DESCRIPTION: Synthetic data - linear sinusoidal gaussian error variance
+* DESCRIPTION: Explore other non bayesian and standard approches commonly applied in ML
+    * EXPERIMENT GOAL: Understand its limitations. Why should be use a bayesian approach?
+* RESOURCES:
+  * [Notebooks](/non_bayesian_techniques/V1.0.0-nonbayesian_techniques)
+
 ### 1 - [Al vuelo](on-the-fly/README.md)
 La técnica de estimación del error al vuelo es nuestro punto de entrada al reto y consiste en añadir (antes de entrenar) una salida más a nuestra red neuronal para que haga una estimación del error de predicción.
 
 Aunque los experimentos proporcionan un buen fundamento teórico de cómo aproximar el reto, los resultados desaconsejan usar esta técnica, en favor de otras que se ven a continuación. El principal problema viene de mezclar predicción y estimación del error de dicha predicción en el mismo proceso de aprendizaje, lo que trae problemas en el entrenamiento y dificulta la explicación del modelo al mezclar hipótesis.
 
 #### Experimentos (Pytorch)
-Experimento original y pruebas derivadas del mismo.
+Experimento original y pruebas derivadas del mismo
+
+**V0.0.1-nongaussian_noise** (TODO: revisión)
+* DATE: 11/12/2019
+* EXPERIMENT-TECHNIQUE: On fly variance estimation - EXP.I
+* DATASET DESCRIPTION: Synthetic data - linear sinusoidal gaussian error variance
+* DESCRIPTION: add non gaussian noise to the original process
+* RESOURCES:
+  * [Notebooks](/on-the-fly/pytorch/V0.0.1-nongaussian_noise)
+
+**V0.0.2-data_faraway_original** (TODO: revisión)
+* DATE: 11/12/2019
+* EXPERIMENT-TECHNIQUE: On fly variance estimation - EXP.I
+* DATASET DESCRIPTION: Synthetic data - linear sinusoidal gaussian error variance
+* DESCRIPTION: Added data in both training and validation far away from the original dataset distribution
+    * EXPERIMENT GOAL: We would like to test if the uncertainty estimation increases in that points
+* RESOURCES:
+  * [Notebooks](/on-the-fly/pytorch/V0.0.2-data_faraway_original)
+
+**V0.0.3-loss_function_customization** (TODO: revisión)
+* DATE: 24/12/2019
+* EXPERIMENT-TECHNIQUE: Loss Function - On fly variance estimation - EXP.I
+* DATASET DESCRIPTION: Synthetic data - linear sinusoidal gaussian error variance
+* DESCRIPTION: Play with the loss functions using different custom losses
+    * EXPERIMENT GOAL: Understand how is propagated both errors (y and sigma losses)
+* RESOURCES:
+  * [Notebooks](/on-the-fly/pytorch/V0.0.3-loss_function_customization)
+
+**V0.0.4-loss_function_frameworks** (TODO: revisión)
+* DATE: 27/12/2019
+* EXPERIMENT-TECHNIQUE: Loss Function - On fly variance estimation - EXP.I
+* DATASET DESCRIPTION: Synthetic data - linear sinusoidal gaussian error variance
+* DESCRIPTION: Implementation in different deep learning frameworks: pytorch, tensorflow
+   * EXPERIMENT GOAL: Tests compatibility of the experiment-technique with different deep learning frameworks
+* RESOURCES:
+  * [Notebooks](/on-the-fly/pytorch/V0.0.4-loss_function_frameworks)
+
+**V0.0.5-bayesian_interpretation** (TODO: revisión)
+* DATE: ---
+* DESCRIPTION: The goal of this notebook is twofold: first, it is explained the original experiment design since a bayesian perspective. Secondly, it is proposed the evaluation of the conformity of the assumptions taken
+* RESOURCES:
+  * [Notebook](/on-the-fly/pytorch/exp1_bayesian_interpretation.ipynb
+
+**V0.0.6-synthetic_data_distribution** (TODO: revisión)
+* DATE: 30/12/2019
+* EXPERIMENT-TECHNIQUE: Loss Function - On fly variance estimation - EXP.I
+* DATASET DESCRIPTION: Synthetic data - linear sinusoidal gaussian error variance
+* DESCRIPTION: Play with different non gaussian error distirbutions and adapt the loss functions accordingly
+   * EXPERIMENT GOAL: Do we improve results if the prior is satisfied?
+* RESOURCES:
+  * [Notebooks](/on-the-fly/pytorch/V0.0.6-synthetic_data_distribution)
+
+
+
+
 
 #### Experimentos (TensorFlow)
 Reimplementación en TensorFlow y pruebas exhaustivas.
