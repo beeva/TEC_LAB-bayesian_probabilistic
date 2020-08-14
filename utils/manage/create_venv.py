@@ -1,0 +1,43 @@
+import os
+import subprocess
+import venv
+
+
+def create_venv(path_experiment, path_utils):
+    """Create a virtual environment
+    Paramenters:
+    ------------
+    path_experiment: string
+      Absolute path to the experiment directory.
+    path_utils: string
+      Absolute path to the utils directory.
+    """
+
+    # Paths
+    path_venv = os.path.join(path_experiment, "venv")
+    path_requirements = os.path.join(path_experiment, "requirements.txt")
+    path_python = os.path.join(path_venv, "bin", "python")
+    # Checks
+    # Experiment path exists
+    if not os.path.exists(path_experiment):
+        raise Exception("Experiment path: {} does NOT exist".format(path_experiment))
+    # There is a "requierements.txt"
+    if not os.path.exists(path_requirements):
+        raise Exception("Experiment does NOT have a \"requirements.txt\"".format(path_requirements))
+    # Create virtual environment
+    print("\t- Creating virtual environment on: {}".format(path_venv))
+    venv.create(
+        env_dir=path_venv,
+        system_site_packages=False,
+        clear=True,
+        symlinks=True,
+        with_pip=True
+    ) 
+    # Install packages
+    print("\t- Installing packages")
+    subprocess.run([path_python, "-m", "pip", "install", "--requirement", path_requirements])
+    # Link utils folder (venv have to exist)
+    path_dest_utils =  os.path.join(path_venv, 'lib', os.listdir(os.path.join(path_venv,'lib'))[0], 'site-packages', 'utils')
+    print("\t- Linking local utilities")
+    os.symlink(path_utils, path_dest_utils, path_dest_utils) 
+
