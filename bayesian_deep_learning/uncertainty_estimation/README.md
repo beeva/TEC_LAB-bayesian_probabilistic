@@ -31,18 +31,6 @@ Hemos identificado estas dimensiones para describir la incertidumbre:
 
 ## Técnicas y experimentos
 
-### 0 - [Técnicas Frecuentistas]
-La estimación de la incertidumbre se puede realizar mediante técnicas frecuentistas. Estas técnicas tienen unas límitaciones respecto a las técnicas bayesianas. El objetivo de los experimentos incluidos aqui es realizar un recopilatorio de técnicas existentes y analizar las ventajas y desventajas respecto a las técnicas bayesianas.
-
-**V1.0.0-nonbayesian_techniques** (TODO: revisión)
-* DATE: 03/12/2019
-* EXPERIMENT-TECHNIQUE: Non bayesian techniques for uncertainty estimation in ML
-* DATASET DESCRIPTION: Synthetic data - linear sinusoidal gaussian error variance
-* DESCRIPTION: Explore other non bayesian and standard approches commonly applied in ML
-    * EXPERIMENT GOAL: Understand its limitations. Why should be use a bayesian approach?
-* RESOURCES:
-  * [Notebooks](/non_bayesian_techniques/V1.0.0-nonbayesian_techniques)
-
 ### 1 - [Al vuelo](on-the-fly/README.md)
 La técnica de estimación del error al vuelo es nuestro punto de entrada al reto y consiste en añadir (antes de entrenar) una salida más a nuestra red neuronal para que haga una estimación del error de predicción.
 
@@ -100,9 +88,6 @@ Experimento original y pruebas derivadas del mismo
    * EXPERIMENT GOAL: Do we improve results if the prior is satisfied?
 * RESOURCES:
   * [Notebooks](/on-the-fly/pytorch/V0.0.6-synthetic_data_distribution)
-
-
-
 
 
 #### Experimentos (TensorFlow)
@@ -187,10 +172,10 @@ _NOTA: completar con la [lista de experimentos](https://raw.githubusercontent.co
 ---
 
 ## Otros documentos
-* [Contexto del reto en la industria](industry.md) (TODO: revisar, no se menciona ninguna industria, candidato a trustworthy)
+* [Contexto del reto en la industria](industry_uncertainty_estimation.md) 
+* [Estimación de la incertidumbre mediante técnicas frecuentistas](frequentist_techniques.md)
 * [Validación y métricas de estimación de la incertidumbre](uncertainty_validation_metrics.md)
 
 ## Referencias
-
 * [Uncertainty quantification](https://en.wikipedia.org/wiki/Uncertainty_quantification) - Wikipedia
 
