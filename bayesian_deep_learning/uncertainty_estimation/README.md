@@ -9,9 +9,6 @@ Ser capaces de dar una estimación, por ejemplo 50,  con un margen de error (baj
 
 El reto también es interesante dentro de las directrices publicadas por comisión europea en 2018 de [Inteligencia Artificial Confiable](https://github.com/beeva/TEC_LAB-Trustworthy_AI), que respondes a la necesidad de industria de construir IA segura con una visión centrada en el humano. 
 
-## Indice de contenidos
-
-
 
 
 ## Características de la incertidumbre de la predicción
