@@ -31,18 +31,6 @@ Hemos identificado estas dimensiones para describir la incertidumbre:
 
 ## Técnicas y experimentos
 
-### 0 - [Técnicas Frecuentistas](non_bayesian_techniques/)
-La estimación de la incertidumbre se puede realizar mediante técnicas frecuentistas. Estas técnicas tienen unas límitaciones respecto a las técnicas bayesianas. El objetivo de los experimentos incluidos aqui es realizar un recopilatorio de técnicas existentes y analizar las ventajas y desventajas respecto a las técnicas bayesianas.
-
-**V1.0.0-nonbayesian_techniques** (TODO: revisión)
-* DATE: 03/12/2019
-* EXPERIMENT-TECHNIQUE: Non bayesian techniques for uncertainty estimation in ML
-* DATASET DESCRIPTION: Synthetic data - linear sinusoidal gaussian error variance
-* DESCRIPTION: Explore other non bayesian and standard approches commonly applied in ML
-    * EXPERIMENT GOAL: Understand its limitations. Why should be use a bayesian approach?
-* RESOURCES:
-  * [Notebooks](/non_bayesian_techniques/V1.0.0-nonbayesian_techniques)
-
 ### 1 - [Al vuelo](on-the-fly/README.md)
 La técnica de estimación del error al vuelo es nuestro punto de entrada al reto y consiste en añadir (antes de entrenar) una salida más a nuestra red neuronal para que haga una estimación del error de predicción.
 
