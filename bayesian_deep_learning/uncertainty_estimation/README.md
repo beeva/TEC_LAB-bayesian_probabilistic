@@ -7,9 +7,7 @@ Un ejemplo lo podemos encontrar en la predicción de ventas de producto, donde s
 
 Ser capaces de dar una estimación, por ejemplo 50,  con un margen de error (bajo +-4 o alto +-30) nos ayudará a diseñar eficientes campañas de ventas y evitar costes innecesarios.
 
-El reto también es interesante dentro de las directrices publicadas por comisión europea en 2018 de [Inteligencia Artificial Confiable](https://github.com/beeva/TEC_LAB-Trustworthy_AI), que respondes a la necesidad de industria de construir IA segura con una visión centrada en el humano. 
-
-
+El reto también es interesante dentro de las directrices publicadas por comisión europea en 2018 de [Inteligencia Artificial Confiable](https://github.com/beeva/TEC_LAB-Trustworthy_AI), que respondes a la necesidad de industria de construir IA segura con una visión centrada en el humano
 
 ## Características de la incertidumbre de la predicción
 Hemos identificado estas dimensiones para describir la incertidumbre:
@@ -128,7 +126,7 @@ Llegamos a la técnica de la mano de su autor [Axel Brando](https://www.linkedin
 * RECURSOS:
   * [Notebook](umal/experiments/01-umal_initial_validation)
   
-**-02-umal_forecasting** (TODO: revisión)
+**02-umal_forecasting** (TODO: revisión)
 * FECHA: 10/07/2020
 * DESCRIPCIÓN: implementación de UMAL como librería y aplicación a la problemática de forecasting. Se proponen 2 datasets de series temporales: un dataset sintético y el [dataset M5 de Kaggle](https://www.kaggle.com/c/m5-forecasting-accuracy) [Work-in-Progress]
 * RECURSOS:
@@ -146,10 +144,6 @@ Llegamos a la técnica de la mano de su autor [Axel Brando](https://www.linkedin
 * RECURSOS:
   * [Notebook](montecarlo_dropout/MC-dropout.ipynb)
 
-## Otros documentos
-* [Contexto del reto en la industria](industry_uncertainty_estimation.md) 
-* [Estimación de la incertidumbre mediante técnicas frecuentistas](frequentist_techniques.md)
-* [Validación y métricas de estimación de la incertidumbre](uncertainty_validation_metrics.md)
 
 ## Referencias
 * [Uncertainty quantification](https://en.wikipedia.org/wiki/Uncertainty_quantification) - Wikipedia
