@@ -1,4 +1,4 @@
-### 0 - [Técnicas Frecuentistas](non_bayesian_techniques/)
+# [Técnicas Frecuentistas](non_bayesian_techniques/)
 El objetivo de los experimentos realizados aqui es proporcionar un contexto sobre otras técnicas utilizadas actualmente para medir la incertidumbre en modelos de machine learning. Es de especial importancia entender las límitaciones de estas técnicas antes de ir a técnicas más complejas basadas en deep learning bayesiano.
 
 **Técnicas propuestas**:
@@ -10,6 +10,8 @@ El objetivo de los experimentos realizados aqui es proporcionar un contexto sobr
 * fbprophet  (TODO)
 * Mean Variance Estimation  (TODO)
 * The Delta Method  (TODO)
+
+## Técnicas y experimentos
 
 **V1.0.0-nonbayesian_techniques** 
 * DATE: 03/12/2019
