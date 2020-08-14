@@ -102,7 +102,9 @@ Si ponemos el ejemplo del precio de una acción en bolsa y queremos saber cuál 
 
 
 ### 4 - [Modelos de mixturas](mixture_density_networks/README.md)
+El modelo de mixturas son modelos probabilísticos que nos permite representar la modelizar la presencia de sub-poblaciones de la población general. Esta técnica nos permite modelar distribuciones más complejas que se alejen en forma de una distribucción normal.
 
+Tras evaluar las límitaciones de la técnica 'On the Fly' para modelar problemáticas que presenten incertidumbre del tipo asimétrica, se decidió estudiar está técnica cómo solución alternativa.
 
 #### Experimentos
 
