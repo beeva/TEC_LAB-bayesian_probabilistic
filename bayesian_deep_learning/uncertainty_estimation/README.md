@@ -105,7 +105,7 @@ Experimento original y pruebas derivadas del mismo
 #### Experimentos (TensorFlow)
 Reimplementación en TensorFlow y pruebas exhaustivas.
 
-**TF - 01-original-on_the_fly** (TODO: revisión)
+**01-original-on_the_fly-tf** (TODO: revisión)
 * FECHA: 07/07/2020
 * DESCRIPCIÓN: reimplementación del experimento original con la librería Tensorflow 2.0.
 * RECURSOS:
@@ -170,7 +170,6 @@ Llegamos a la técnica de la mano de su autor [Axel Brando](https://www.linkedin
 (TODO: qué hacer con traffic ligths, no es nuestro código)
 
 #### Experimentos
-** **
 **MC-dropout**
 * FECHA: - (por hacer)
 * DESCRIPCIÓN: introducción a la técnica de Monte Carlo dropout.

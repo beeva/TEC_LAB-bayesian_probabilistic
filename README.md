@@ -1,19 +1,20 @@
 # Métodos Bayesianos y Programación Probabilística
 
-## Introducción 
-* **¿Qué es?**
+## Introducción
+La [**estadística bayesiana**](https://en.wikipedia.org/wiki/Bayesian_statistics) es un subconjunto del campo de la estadística en que la certidumbre o grado de creencia en un evento se expresa en forma de probabilidad.
 
-La **estadística bayesiana** es un subconjunto del campo de la estadística en la que la evidencia sobre el verdadero estado del mundo se expresa **en términos de grados de creencia, es decir, trata la modelización de la incertidumbre**
+Por otro lado, la **programación probabilística** ofrece un marco de trabajo que permite evaluar las distribuciones condicionales por las que un conjunto de entradas u observaciones pueden dar lugar a una determinada sálida. 
 
-Por otro lado, la **programación probabilística** nos ofrece el marco de trabajo que nos permite evaluar las distribuciones condicionales por las que un conjunto de entradas u observaciones pueden dar lugar a una determinada sálida. 
+## Interés
+Los métodos bayesianos proporcionan un enfoque para resolver **problemas complejos** que presentan un alto grado de **incertidumbre** cuando no es posible ofrecer de manera conluyente una única solución válida.
 
-* **¿Por qué es interesante?**
+En el campo del **aprendizaje automático** es comun lidiar con una representación incompleta de la realidad, ya sea por la escasez de datos o la poca expresividad de los mismos a la hora representar variabilidad. Creemos que el actual [enfoque frecuentista](https://en.wikipedia.org/wiki/Frequentist_probability) expresa las soluciones en términos absolutos y por eso un enfoque bayesiano ayudaría a **generar confianza** y **tomar mejores decisiones**.
 
-Los métodos bayesianos nos proporcionan un nuevo enfoque para **la resolución de problemas complejos** que presentan un alto grado de incertidumbre y de los cuales no es posible ofrecer de manera conluyente una única solución válida.
+La [inferencia bayesiana](https://en.wikipedia.org/wiki/Bayesian_inference) proporciona nuevas herramientas que complementan a las ya disponibles que nos permiten pivotar hacia una visión del problema centrada en la persona.  
+Ejemplos de estas técnicas son:
+* La estimación de la incertidumbre en las predicciones.
+* Descubrimiento de relaciones causa-efecto en vez de meras correlaciones.
 
-Un ejemplo de esto lo podemos encontrar en el campo de **Machine Learning** en el que se modela una realidad compleja mediante la información extraída de unos datos límitados que nos llevan, en muchos casos, a aceptar en términos absolutos soluciones incorrectas. Este tipo de comportamiento **genera desconfianza y dificulta la toma de decisiones**. 
-
-Así, la inferencia bayesiana abre los límites de las aproximaciones actuales basadas en estadística frecuentista y propociona un marco de trabajo más amplio y cercano al humano. Estas técnicas permiten ofrecer capacidades complementarias como la [estimación de la incertidumbre de las predicciones](bayesian_deep_learning/uncertainty_estimation) o el [descubrimiento de relaciones de causa-efecto](https://github.com/beeva/TEC_LAB-causality_vs_machine_learning) que permiten mejorar el grado de comprensión y generalización de estos modelos.
 
 ## Trabajo realizado
 * 🧠 [Aprendizaje profundo bayesiano](bayesian_deep_learning)
@@ -35,6 +36,7 @@ Así, la inferencia bayesiana abre los límites de las aproximaciones actuales b
   
   
 ## Referencias
+
 * Introduction to Bayesian data analysis - Youtube
   * [Part 1: What is Bayes?](https://www.youtube.com/watch?v=3OJEae7Qb_o)
   * [Part 2: Why use Bayes?](https://www.youtube.com/watch?v=mAUwjSo5TJE)
