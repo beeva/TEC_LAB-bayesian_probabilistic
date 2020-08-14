@@ -22,7 +22,7 @@ Ejemplos de estas técnicas son:
 * 🕸 Redes Bayesianas
 * Procesos Gausianos
 * ⇒ Causalidad
-  * [Recursos en Google Drive](https://drive.google.com/drive/folders/1uefX12ZtAieVE3SVsTqI94E8s5wXOs07)
+  * [Introducción](causality/README.md)
   * [Modelos de Ecuaciones Estructurales](https://github.com/beeva/TEC_LAB-structural_equation_modeling)
   * [Causalidad "vs" Machine Learning](https://github.com/beeva/TEC_LAB-causality_vs_machine_learning)
 * 🔧  Herramientas y librerías

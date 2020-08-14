@@ -31,18 +31,6 @@ Hemos identificado estas dimensiones para describir la incertidumbre:
 
 ## Técnicas y experimentos
 
-### 0 - [Técnicas Frecuentistas]
-La estimación de la incertidumbre se puede realizar mediante técnicas frecuentistas. Estas técnicas tienen unas límitaciones respecto a las técnicas bayesianas. El objetivo de los experimentos incluidos aqui es realizar un recopilatorio de técnicas existentes y analizar las ventajas y desventajas respecto a las técnicas bayesianas.
-
-**V1.0.0-nonbayesian_techniques** (TODO: revisión)
-* DATE: 03/12/2019
-* EXPERIMENT-TECHNIQUE: Non bayesian techniques for uncertainty estimation in ML
-* DATASET DESCRIPTION: Synthetic data - linear sinusoidal gaussian error variance
-* DESCRIPTION: Explore other non bayesian and standard approches commonly applied in ML
-    * EXPERIMENT GOAL: Understand its limitations. Why should be use a bayesian approach?
-* RESOURCES:
-  * [Notebooks](/non_bayesian_techniques/V1.0.0-nonbayesian_techniques)
-
 ### 1 - [Al vuelo](on-the-fly/README.md)
 La técnica de estimación del error al vuelo es nuestro punto de entrada al reto y consiste en añadir (antes de entrenar) una salida más a nuestra red neuronal para que haga una estimación del error de predicción.
 
@@ -51,66 +39,30 @@ Aunque los experimentos proporcionan un buen fundamento teórico de cómo aproxi
 #### Experimentos (Pytorch)
 Experimento original y pruebas derivadas del mismo
 
-**V0.0.1-nongaussian_noise** (TODO: revisión)
-* DATE: 11/12/2019
-* EXPERIMENT-TECHNIQUE: On fly variance estimation - EXP.I
-* DATASET DESCRIPTION: Synthetic data - linear sinusoidal gaussian error variance
-* DESCRIPTION: add non gaussian noise to the original process
-* RESOURCES:
-  * [Notebooks](/on-the-fly/pytorch/V0.0.1-nongaussian_noise)
+**V0.0.1-initial_validation**
+* FECHA: 11/12/2019
+* DESCRIPCIÓN: Validación básica (reproducibilidad de resultados) del funcionamiento de la técnica 
+* RECURSOS:
+  * [Notebooks](/on-the-fly/pytorch/V0.0.1-initial_validation)
 
-**V0.0.2-data_faraway_original** (TODO: revisión)
-* DATE: 11/12/2019
-* EXPERIMENT-TECHNIQUE: On fly variance estimation - EXP.I
-* DATASET DESCRIPTION: Synthetic data - linear sinusoidal gaussian error variance
-* DESCRIPTION: Added data in both training and validation far away from the original dataset distribution
-    * EXPERIMENT GOAL: We would like to test if the uncertainty estimation increases in that points
-* RESOURCES:
-  * [Notebooks](/on-the-fly/pytorch/V0.0.2-data_faraway_original)
+**V0.0.2-uncertainty_validation** 
+* FECHA: 27/12/2019
+* DESCRIPCIÓN: Validación de las límitaciones de la técnica mediante la generación de datos sintéticos con distintos tipos de incertidumbre
+* RECURSOS:
+  * [Notebooks](/on-the-fly/pytorch/V0.0.2-uncertainty_validation)
 
-**V0.0.3-loss_function_customization** (TODO: revisión)
-* DATE: 24/12/2019
-* EXPERIMENT-TECHNIQUE: Loss Function - On fly variance estimation - EXP.I
-* DATASET DESCRIPTION: Synthetic data - linear sinusoidal gaussian error variance
-* DESCRIPTION: Play with the loss functions using different custom losses
-    * EXPERIMENT GOAL: Understand how is propagated both errors (y and sigma losses)
-* RESOURCES:
+**V0.0.3-loss_function_customization**
+* FECHA: 24/12/2019
+* DESCRIPCIÓN: Pruebas realizadas modificando la función de pérdida con el objetivo de mejorar su compatibilidad con distintos frameworks y entender cómo se propaga el error en entrenamiento
+* RECURSOS:
   * [Notebooks](/on-the-fly/pytorch/V0.0.3-loss_function_customization)
-
-**V0.0.4-loss_function_frameworks** (TODO: revisión)
-* DATE: 27/12/2019
-* EXPERIMENT-TECHNIQUE: Loss Function - On fly variance estimation - EXP.I
-* DATASET DESCRIPTION: Synthetic data - linear sinusoidal gaussian error variance
-* DESCRIPTION: Implementation in different deep learning frameworks: pytorch, tensorflow
-   * EXPERIMENT GOAL: Tests compatibility of the experiment-technique with different deep learning frameworks
-* RESOURCES:
-  * [Notebooks](/on-the-fly/pytorch/V0.0.4-loss_function_frameworks)
-
-**V0.0.5-bayesian_interpretation** (TODO: revisión)
-* DATE: ---
-* DESCRIPTION: The goal of this notebook is twofold: first, it is explained the original experiment design since a bayesian perspective. Secondly, it is proposed the evaluation of the conformity of the assumptions taken
-* RESOURCES:
-  * [Notebook](/on-the-fly/pytorch/exp1_bayesian_interpretation.ipynb
-
-**V0.0.6-synthetic_data_distribution** (TODO: revisión)
-* DATE: 30/12/2019
-* EXPERIMENT-TECHNIQUE: Loss Function - On fly variance estimation - EXP.I
-* DATASET DESCRIPTION: Synthetic data - linear sinusoidal gaussian error variance
-* DESCRIPTION: Play with different non gaussian error distirbutions and adapt the loss functions accordingly
-   * EXPERIMENT GOAL: Do we improve results if the prior is satisfied?
-* RESOURCES:
-  * [Notebooks](/on-the-fly/pytorch/V0.0.6-synthetic_data_distribution)
-
-
-
-
 
 #### Experimentos (TensorFlow)
 Reimplementación en TensorFlow y pruebas exhaustivas.
 
-**01-original-on_the_fly-tf** (TODO: revisión)
+**01-original-on_the_fly-tf**
 * FECHA: 07/07/2020
-* DESCRIPCIÓN: reimplementación del experimento original con la librería Tensorflow 2.0.
+* DESCRIPCIÓN: reimplementación del experimento original con la librería Tensorflow 2.0
 * RECURSOS:
   * [Notebook](on-the-fly/tf/01-original-on_the_fly-tf.ipynb)
 
@@ -128,15 +80,39 @@ La regresión cuantílica nos permite hacer una predicción sobre un cuantíl co
 Por ejemplo, si queremos los valores extremos del intervalo que recogen el 50% de las observaciones, deberemos obtener dos predicciones, las asociadas a los cuantiles de orden 0.25 y 0.75 respectivamente.  
 Si ponemos el ejemplo del precio de una acción en bolsa y queremos saber cuál es la variabilidad en el 90% de los casos, obtendremos los cuantiles 0.05 y 0.95. Pongamos que salen 200$ y 250$, con lo que podríamos decir que el 90% de las veces, la variabilidad es de 50$.
 
-
 #### Experimentos
+
+**01-quantile_regression** (TODO: revisión)
+* FECHA: 01/06/2020
+* DESCRIPCIÓN: Benchmark básico con distintas técnicas de regresión cuantílica sobre el [dataset de precios de casas de Boston](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_boston.html) 
+* RECURSOS:
+  * [Notebook](quantile_regression/experiments/01-quantile_regression)
+
+**02-lstm** (TODO: revisión)
+* FECHA: 10/06/2020
+* DESCRIPCIÓN: Implementación del módelo más básico de LSTM con aplicación en un dataset sintético de series temporales
+* RECURSOS:
+  * [Notebook](quantile_regression/lstm/experiments/02-lstm)
+
+**03-deepquantile_lstm** (TODO: revisión)
+* FECHA: 20/06/2020
+* DESCRIPCIÓN: Implementación de estimación de la incertidumbre en forecasting utilizando el dataset sintético de series temporales
+* RECURSOS:
+  * [Notebook](quantile_regression/deepquantile_lstm/03-dqr_lstm)
 
 
 ### 4 - [Modelos de mixturas](mixture_density_networks/README.md)
+El modelo de mixturas son modelos probabilísticos que nos permite representar la modelizar la presencia de sub-poblaciones de la población general. Esta técnica nos permite modelar distribuciones más complejas que se alejen en forma de una distribucción normal.
 
+Tras evaluar las límitaciones de la técnica 'On the Fly' para modelar problemáticas que presenten incertidumbre del tipo asimétrica, se decidió estudiar está técnica cómo solución alternativa.
 
 #### Experimentos
 
+**01-mixture_density_networks** (TODO: revisión)
+* FECHA: 20/06/2020
+* DESCRIPCIÓN: Aplicación del modelo MDN (Mixture Density Networks) para la estimación de la incertidumbre en el dataset sintético de 'On the Fly' y sobre el [dataset de precios de casas de Boston](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_boston.html). El objetivo es comparar está técnica con los resultados obtenidos en 'On the Fly'
+* RECURSOS:
+  * [Notebook](mixture_density_networks/experiments/01-mixture_density_networks)
 
 ### 5 - [UMAL - Uncountable Mixture Asymetric Laplacian](umal/README.md)
 [UMAL (Uncountable Mixture Asymetric Laplacian)](https://arxiv.org/abs/1910.12288) es una técnica avanzada que nos provee de características muy interesantes para la toma de decisiones en entornos de alta incertidumbre.__
@@ -148,25 +124,18 @@ Llegamos a la técnica de la mano de su autor [Axel Brando](https://www.linkedin
 
 #### Experimentos
 
-**-**
-* FECHA: 
-* DESCRIPCIÓN: introdución a la técnica de UMAL.
+**01-umal_initial_validation** (TODO: revisión)
+* FECHA: 01/07/2020
+* DESCRIPCIÓN: Validación de la técnica UMAL utilizando la implementación del autor para estimar la estimación de incertidumbre aleátorica. Se utiliza un dataset sintético que modela distintos tipos de incertidumbre  
 * RECURSOS:
-  * [Notebook](umal/)
+  * [Notebook](umal/experiments/01-umal_initial_validation)
   
-**-**
-* FECHA: 
-* DESCRIPCIÓN: implementación de UMAL como librería.
+**02-umal_forecasting** (TODO: revisión)
+* FECHA: 10/07/2020
+* DESCRIPCIÓN: implementación de UMAL como librería y aplicación a la problemática de forecasting. Se proponen 2 datasets de series temporales: un dataset sintético y el [dataset M5 de Kaggle](https://www.kaggle.com/c/m5-forecasting-accuracy) [Work-in-Progress]
 * RECURSOS:
-  * [Notebook](umal/)
+  * [Notebook](umal/experiments/02-umal_forecasting)
   
-**-**
-** Introducción
-* FECHA: 
-* DESCRIPCIÓN: aplicación de UMAL al [dataset M5 de Kaggle](https://www.kaggle.com/c/m5-forecasting-accuracy).
-* RECURSOS:
-  * [Notebook](umal/)
-
 
 ### 6 - Monte Carlo dropout
 
@@ -179,18 +148,11 @@ Llegamos a la técnica de la mano de su autor [Axel Brando](https://www.linkedin
 * RECURSOS:
   * [Notebook](montecarlo_dropout/MC-dropout.ipynb)
 
-
----
->(TODO:
-_NOTA: completar con la [lista de experimentos](https://raw.githubusercontent.com/beeva/TEC_LAB-bayesian_probabilistic/f8b30546cc2d2e216336c864568813f9ed5fcfff/labs_experiments/README.md)
-)
----
-
 ## Otros documentos
-* [Contexto del reto en la industria](industry.md) (TODO: revisar, no se menciona ninguna industria, candidato a trustworthy)
+* [Contexto del reto en la industria](industry_uncertainty_estimation.md) 
+* [Estimación de la incertidumbre mediante técnicas frecuentistas](frequentist_techniques.md)
 * [Validación y métricas de estimación de la incertidumbre](uncertainty_validation_metrics.md)
 
 ## Referencias
-
 * [Uncertainty quantification](https://en.wikipedia.org/wiki/Uncertainty_quantification) - Wikipedia
 
