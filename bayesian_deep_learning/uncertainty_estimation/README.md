@@ -40,21 +40,21 @@ Aunque los experimentos proporcionan un buen fundamento teórico de cómo aproxi
 Experimento original y pruebas derivadas del mismo
 
 **V0.0.1-initial_validation**
-* DATE: 11/12/2019
+* FECHA: 11/12/2019
 * DESCRIPCIÓN: Validación básica (reproducibilidad de resultados) del funcionamiento de la técnica 
-* RESOURCES:
+* RECURSOS:
   * [Notebooks](/on-the-fly/pytorch/V0.0.1-initial_validation)
 
 **V0.0.2-uncertainty_validation** 
-* DATE: 27/12/2019
+* FECHA: 27/12/2019
 * DESCRIPCIÓN: Validación de las límitaciones de la técnica mediante la generación de datos sintéticos con distintos tipos de incertidumbre
-* RESOURCES:
+* RECURSOS:
   * [Notebooks](/on-the-fly/pytorch/V0.0.2-uncertainty_validation)
 
 **V0.0.3-loss_function_customization**
-* DATE: 24/12/2019
+* FECHA: 24/12/2019
 * DESCRIPCIÓN: Pruebas realizadas modificando la función de pérdida con el objetivo de mejorar su compatibilidad con distintos frameworks y entender cómo se propaga el error en entrenamiento
-* RESOURCES:
+* RECURSOS:
   * [Notebooks](/on-the-fly/pytorch/V0.0.3-loss_function_customization)
 
 #### Experimentos (TensorFlow)
