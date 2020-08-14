@@ -31,7 +31,7 @@ Hemos identificado estas dimensiones para describir la incertidumbre:
 
 ## Técnicas y experimentos
 
-### 0 - [Técnicas Frecuentistas]
+### 0 - [Técnicas Frecuentistas](non_bayesian_techniques/)
 La estimación de la incertidumbre se puede realizar mediante técnicas frecuentistas. Estas técnicas tienen unas límitaciones respecto a las técnicas bayesianas. El objetivo de los experimentos incluidos aqui es realizar un recopilatorio de técnicas existentes y analizar las ventajas y desventajas respecto a las técnicas bayesianas.
 
 **V1.0.0-nonbayesian_techniques** (TODO: revisión)
@@ -100,9 +100,6 @@ Experimento original y pruebas derivadas del mismo
    * EXPERIMENT GOAL: Do we improve results if the prior is satisfied?
 * RESOURCES:
   * [Notebooks](/on-the-fly/pytorch/V0.0.6-synthetic_data_distribution)
-
-
-
 
 
 #### Experimentos (TensorFlow)
@@ -188,10 +185,10 @@ _NOTA: completar con la [lista de experimentos](https://raw.githubusercontent.co
 ---
 
 ## Otros documentos
-* [Contexto del reto en la industria](industry.md) (TODO: revisar, no se menciona ninguna industria, candidato a trustworthy)
+* [Contexto del reto en la industria](industry_uncertainty_estimation.md) 
+* [Estimación de la incertidumbre mediante técnicas frecuentistas](frequentist_techniques.md)
 * [Validación y métricas de estimación de la incertidumbre](uncertainty_validation_metrics.md)
 
 ## Referencias
-
 * [Uncertainty quantification](https://en.wikipedia.org/wiki/Uncertainty_quantification) - Wikipedia
 
