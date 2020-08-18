@@ -39,23 +39,26 @@ Aunque los experimentos proporcionan un buen fundamento teórico de cómo aproxi
 #### Experimentos (Pytorch)
 Experimento original y pruebas derivadas del mismo
 
-**V0.0.1-initial_validation**
+**01-initial_validation**
 * FECHA: 11/12/2019
 * DESCRIPCIÓN: Validación básica (reproducibilidad de resultados) del funcionamiento de la técnica 
 * RECURSOS:
-  * [Notebooks](/on-the-fly/pytorch/V0.0.1-initial_validation)
+  * [Notebooks](/on-the-fly/pytorch/01-initial_validation)
 
-**V0.0.2-uncertainty_validation** 
+**02-uncertainty_validation** 
 * FECHA: 27/12/2019
-* DESCRIPCIÓN: Validación de las límitaciones de la técnica mediante la generación de datos sintéticos con distintos tipos de incertidumbre
+* DESCRIPCIÓN: Validación de las límitaciones de la técnica mediante la generación de datos sintéticos con distintos tipos de incertidumbre. Este experimento incluye las siguientes pruebas: 
+    * **01-data_faraway_original**: Predicción de incertidumbre en ejemplos lejos de la distribucción del dataset de entrenamiento
+    * **02-nongaussian_noise**: Addición de ruido en puntos especificos del dataset sintético
+    * **03-synthetic_data_distribution**: Generación de datos sintéticos con ruido no gausiano     
 * RECURSOS:
-  * [Notebooks](/on-the-fly/pytorch/V0.0.2-uncertainty_validation)
+  * [Notebooks](/on-the-fly/pytorch/02-uncertainty_validation)
 
-**V0.0.3-loss_function_customization**
+**03-loss_function_customization**
 * FECHA: 24/12/2019
 * DESCRIPCIÓN: Pruebas realizadas modificando la función de pérdida con el objetivo de mejorar su compatibilidad con distintos frameworks y entender cómo se propaga el error en entrenamiento
 * RECURSOS:
-  * [Notebooks](/on-the-fly/pytorch/V0.0.3-loss_function_customization)
+  * [Notebooks](/on-the-fly/pytorch/03-loss_function_customization)
 
 #### Experimentos (TensorFlow)
 Reimplementación en TensorFlow y pruebas exhaustivas.
