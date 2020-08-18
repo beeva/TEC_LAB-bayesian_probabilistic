@@ -32,8 +32,11 @@ Ejemplos de estas técnicas son:
   * PPT - [Estimación de la incertidumbre](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc)
   * PPT - [AI desde un nuevo punto de vista: Bayesianos](https://docs.google.com/presentation/d/158Wi28rWwBFuqM1bmjjy03PLX83ssA8p3vq_Op9HL7M)
   * BBVA Next Technologies Blog (15/01/2020) - [Bayesianos, viendo la inteligencia artificial desde otro prisma](https://www.bbvanexttechnologies.com/bayesianos-viendo-la-inteligencia-artificial-desde-otro-prisma/)
-  
-  
+
+
+## Experimentos
+Como garantía de calidad, nos esforzamos porque todos nuestros experimentos sean repetibles. Para más información sobre cómo manejarlos (listar, instalar, etc), recomendamos leer [experiment repeatability](utils/manage/README.md).
+
   
 ## Referencias
 
