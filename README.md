@@ -41,7 +41,7 @@ Ejemplos de estas técnicas son:
   * [Part 1: What is Bayes?](https://www.youtube.com/watch?v=3OJEae7Qb_o)
   * [Part 2: Why use Bayes?](https://www.youtube.com/watch?v=mAUwjSo5TJE)
   * [Part 3: How to do Bayes?](https://www.youtube.com/watch?v=Ie-6H_r7I5A)
-* [Visualización gráfica de conceptos básicos de probabilidad](https://seeing-theory.brown.edu/)
+* [A visual introduction to probability and statistics - Seeing Theory](https://seeing-theory.brown.edu/)
 * [Is bayesian the most brilliant thing ever?](https://www.youtube.com/watch?v=HumFmLu3CJ8) - Youtube, NIPS 2016
 * [Bayesian probability theory](http://users.ics.aalto.fi/harri/thesis/valpola_thesis/node12.html) - Polytechnica scandinavica
 
