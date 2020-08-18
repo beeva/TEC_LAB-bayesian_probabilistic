@@ -36,7 +36,10 @@ def create_venv(path_experiment, path_utils):
         clear=True,
         symlinks=True,
         with_pip=True
-    ) 
+    )
+    # Update pip to the last version
+    print("\t- Upgrading local 'pip' package")
+    subprocess.run([path_python, "-m", "pip", "install", "--upgrade", "pip"])
     # Install packages
     print("\t- Installing packages")
     subprocess.run([path_python, "-m", "pip", "install", "--requirement", path_requirements])
