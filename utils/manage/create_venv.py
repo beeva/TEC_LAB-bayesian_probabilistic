@@ -2,6 +2,13 @@ import os
 import subprocess
 import venv
 
+from .experiment import is_experiment
+
+
+"""TODO
+
+from .experiment import is_experiment
+"""
 
 def create_venv(path_experiment, path_utils):
     """Create a virtual environment
@@ -17,13 +24,10 @@ def create_venv(path_experiment, path_utils):
     path_venv = os.path.join(path_experiment, "venv")
     path_requirements = os.path.join(path_experiment, "requirements.txt")
     path_python = os.path.join(path_venv, "bin", "python")
-    # Checks
-    # Experiment path exists
-    if not os.path.exists(path_experiment):
-        raise Exception("Experiment path: {} does NOT exist".format(path_experiment))
-    # There is a "requierements.txt"
-    if not os.path.exists(path_requirements):
-        raise Exception("Experiment does NOT have a \"requirements.txt\"".format(path_requirements))
+    is_experiment(path_experiment)
+    # Do not create a venv if found one
+    if os.path.exists(path_venv):
+        raise Exception("ERROR: You already have an enviroment in: {}".format(path_venv))
     # Create virtual environment
     print("\t- Creating virtual environment on: {}".format(path_venv))
     venv.create(
