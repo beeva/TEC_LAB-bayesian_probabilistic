@@ -39,13 +39,13 @@ Aunque los experimentos proporcionan un buen fundamento teórico de cómo aproxi
 #### Experimentos (Pytorch)
 Experimento original y pruebas derivadas del mismo
 
-**01-initial_validation**
+**01-initial_validation** (TODO: revisión)
 * FECHA: 11/12/2019
 * DESCRIPCIÓN: Validación básica (reproducibilidad de resultados) del funcionamiento de la técnica 
 * RECURSOS:
   * [Notebooks](on-the-fly/pytorch/01-initial_validation)
 
-**02-uncertainty_validation** 
+**02-uncertainty_validation**  (TODO: revisión)
 * FECHA: 27/12/2019
 * DESCRIPCIÓN: Validación de las límitaciones de la técnica mediante la generación de datos sintéticos con distintos tipos de incertidumbre. Este experimento incluye las siguientes pruebas: 
     * **01-data_faraway_original**: Predicción de incertidumbre en ejemplos lejos de la distribucción del dataset de entrenamiento
@@ -54,7 +54,7 @@ Experimento original y pruebas derivadas del mismo
 * RECURSOS:
   * [Notebooks](on-the-fly/pytorch/02-uncertainty_validation)
 
-**03-loss_function_customization**
+**03-loss_function_customization** (TODO: revisión)
 * FECHA: 24/12/2019
 * DESCRIPCIÓN: Pruebas realizadas modificando la función de pérdida con el objetivo de mejorar su compatibilidad con distintos frameworks y entender cómo se propaga el error en entrenamiento
 * RECURSOS:
