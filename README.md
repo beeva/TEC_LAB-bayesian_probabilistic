@@ -6,9 +6,12 @@ La [**estadística bayesiana**](https://en.wikipedia.org/wiki/Bayesian_statistic
 Por otro lado, la **programación probabilística** ofrece un marco de trabajo que permite evaluar las distribuciones condicionales por las que un conjunto de entradas u observaciones pueden dar lugar a una determinada sálida. 
 
 ## Interés
-Los métodos bayesianos proporcionan un enfoque para resolver **problemas complejos** que presentan un alto grado de **incertidumbre** cuando no es posible ofrecer de manera conluyente una única solución válida.
-
+En la actualidad los modelos de inteligencia artificila son cada vez más complejos y se encuentran cada vez más en 
+entornos críticos que han de responder en tiempo real. Provocando que éstos se encuentren con situaciones que nunca han visto
+y teniendo que tomar decisiones en problemas con muchas soluciones.
 En el campo del **aprendizaje automático** es comun lidiar con una representación incompleta de la realidad, ya sea por la escasez de datos o la poca expresividad de los mismos a la hora representar variabilidad. Creemos que el actual [enfoque frecuentista](https://en.wikipedia.org/wiki/Frequentist_probability) expresa las soluciones en términos absolutos y por eso un enfoque bayesiano ayudaría a **generar confianza** y **tomar mejores decisiones**.
+
+Los métodos bayesianos proporcionan un enfoque para resolver **problemas complejos** que presentan un alto grado de **incertidumbre** cuando no es posible ofrecer de manera conluyente una única solución válida.
 
 La [inferencia bayesiana](https://en.wikipedia.org/wiki/Bayesian_inference) proporciona nuevas herramientas que complementan a las ya disponibles que nos permiten pivotar hacia una visión del problema centrada en la persona.  
 Ejemplos de estas técnicas son:
@@ -17,6 +20,8 @@ Ejemplos de estas técnicas son:
 
 
 ## Trabajo realizado
+
+###Subáreas
 * 🧠 [Aprendizaje profundo bayesiano](bayesian_deep_learning)
   * ⯑ [Estimación de la incertidumbre](bayesian_deep_learning/uncertainty_estimation)
 * 🕸 Redes Bayesianas
@@ -25,10 +30,10 @@ Ejemplos de estas técnicas son:
   * [Introducción](causality/README.md)
   * [Modelos de Ecuaciones Estructurales](https://github.com/beeva/TEC_LAB-structural_equation_modeling)
   * [Causalidad "vs" Machine Learning](https://github.com/beeva/TEC_LAB-causality_vs_machine_learning)
-* 🔧  Herramientas y librerías
+### 🔧  Herramientas y librerías
   * [Pyro](https://github.com/next-samuelmunoz/bayprob) (Pytorch library)
   * [Árboles de decisión bayesianos](https://github.com/beeva/TEC_LAB-bayesian_decision_trees)
-* 🗣️ Comunicación
+### 🗣️ Comunicación
   * PPT - [Estimación de la incertidumbre](https://docs.google.com/presentation/d/1mRkL54FNAwC0YNSKmbeWWg-IJNR2ch6oCLktIXDMjfc)
   * PPT - [AI desde un nuevo punto de vista: Bayesianos](https://docs.google.com/presentation/d/158Wi28rWwBFuqM1bmjjy03PLX83ssA8p3vq_Op9HL7M)
   * BBVA Next Technologies Blog (15/01/2020) - [Bayesianos, viendo la inteligencia artificial desde otro prisma](https://www.bbvanexttechnologies.com/bayesianos-viendo-la-inteligencia-artificial-desde-otro-prisma/)
