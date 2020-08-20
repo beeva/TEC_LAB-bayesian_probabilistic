@@ -158,4 +158,5 @@ Llegamos a la técnica de la mano de su autor [Axel Brando](https://www.linkedin
 
 ## Referencias
 * [Uncertainty quantification](https://en.wikipedia.org/wiki/Uncertainty_quantification) - Wikipedia
-
+* [Can You Trust Your Model’s Uncertainty? Evaluating
+Predictive Uncertainty Under Dataset Shift](https://arxiv.org/pdf/1906.02530.pdf) - Evalúan diferentes técnicas de estimación de la incertidumbre

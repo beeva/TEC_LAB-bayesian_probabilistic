@@ -6,7 +6,7 @@ La [**estadística bayesiana**](https://en.wikipedia.org/wiki/Bayesian_statistic
 Por otro lado, la **programación probabilística** ofrece un marco de trabajo que permite evaluar las distribuciones condicionales por las que un conjunto de entradas u observaciones pueden dar lugar a una determinada sálida. 
 
 ## Interés
-En la actualidad los modelos de inteligencia artificila son cada vez más complejos y se encuentran cada vez más en 
+En la actualidad los modelos de inteligencia artificial son cada vez más complejos y se encuentran cada vez más en 
 entornos críticos que han de responder en tiempo real. Provocando que éstos se encuentren con situaciones que nunca han visto
 y teniendo que tomar decisiones en problemas con muchas soluciones.
 En el campo del **aprendizaje automático** es comun lidiar con una representación incompleta de la realidad, ya sea por la escasez de datos o la poca expresividad de los mismos a la hora representar variabilidad. Creemos que el actual [enfoque frecuentista](https://en.wikipedia.org/wiki/Frequentist_probability) expresa las soluciones en términos absolutos y por eso un enfoque bayesiano ayudaría a **generar confianza** y **tomar mejores decisiones**.
