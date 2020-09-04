@@ -3,7 +3,7 @@ El objetivo de los experimentos realizados aqui es proporcionar un contexto sobr
 
 **Técnicas propuestas**:
 
-* [Bootstrapping](non_bayesian_techniques/V1.0.0-nonbayesian_techniques)
+* [Bootstrapping](experiments/boostrapping_confidence_intervals.ipynb)
 * Cross-validation (TODO)
 * Conformal Predictors (TODO)
 * [Quantile Regression](quantile_regression/README.md)
@@ -17,4 +17,4 @@ El objetivo de los experimentos realizados aqui es proporcionar un contexto sobr
 * DATE: 03/12/2019
 * DESCRIPCIÓN: Estimación de la incertidumbre mediante Bootstrapping
 * RECURSOS:
-  * [Notebooks](non_bayesian_techniques/V1.0.0-nonbayesian_techniques)
+  * [Notebooks](experiments/boostrapping_confidence_intervals.ipynb)
