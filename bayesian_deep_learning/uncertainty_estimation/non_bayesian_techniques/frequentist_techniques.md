@@ -6,7 +6,7 @@ El objetivo de los experimentos realizados aqui es proporcionar un contexto sobr
 * [Bootstrapping](experiments/boostrapping_confidence_intervals.ipynb)
 * Cross-validation (TODO)
 * Conformal Predictors (TODO)
-* [Quantile Regression](quantile_regression/README.md)
+* Quantile Regression (TODO)
 * fbprophet  (TODO)
 * Mean Variance Estimation  (TODO)
 * The Delta Method  (TODO)
