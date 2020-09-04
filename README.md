@@ -21,7 +21,7 @@ Ejemplos de estas técnicas son:
 
 ## Trabajo realizado
 
-###Subáreas
+### Subáreas
 * 🧠 [Aprendizaje profundo bayesiano](bayesian_deep_learning)
   * ⯑ [Estimación de la incertidumbre](bayesian_deep_learning/uncertainty_estimation)
 * 🕸 Redes Bayesianas
