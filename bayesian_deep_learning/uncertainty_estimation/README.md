@@ -157,6 +157,7 @@ Llegamos a la técnica de la mano de su autor [Axel Brando](https://www.linkedin
 * [Contexto del reto en la industria](industry_uncertainty_estimation.md) 
 * [Estimación de la incertidumbre mediante técnicas frecuentistas](non_bayesian_techniques/frequentist_techniques.md)
 * [Validación y métricas de estimación de la incertidumbre](uncertainty_validation_metrics.md)
+* [Borrador técnico de estimación de la incertidumbre](https://docs.google.com/document/d/1DkcUwaWw3lTW_1ylt3POmfGURaD08xCuaUBYcRnc_5U)
 
 ## Referencias
 * [Uncertainty quantification](https://en.wikipedia.org/wiki/Uncertainty_quantification) - Wikipedia
