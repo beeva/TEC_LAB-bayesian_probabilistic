@@ -43,7 +43,7 @@ Experimento original y pruebas derivadas del mismo
 * FECHA: 11/12/2019
 * DESCRIPCIÓN: Validación básica (reproducibilidad de resultados) del funcionamiento de la técnica 
 * RECURSOS:
-  * [Notebooks](on-the-fly/pytorch/01-initial_validation)
+  * [Notebook](on-the-fly/pytorch/01-initial_validation/initial_validation.ipynb)
 
 **02-uncertainty_validation**  (TODO: revisión)
 * FECHA: 27/12/2019
