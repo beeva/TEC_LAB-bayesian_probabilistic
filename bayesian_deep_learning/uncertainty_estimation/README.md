@@ -41,18 +41,18 @@ Experimento original y pruebas derivadas del mismo
 
 **01-initial_validation** (TODO: revisión)
 * FECHA: 11/12/2019
-* DESCRIPCIÓN: Validación básica (reproducibilidad de resultados) del funcionamiento de la técnica 
+* DESCRIPCIÓN: Validación básica (reproducibilidad de resultados) del funcionamiento de la técnica.
 * RECURSOS:
   * [Notebook](on-the-fly/pytorch/01-initial_validation/initial_validation.ipynb)
 
 **02-uncertainty_validation**  (TODO: revisión)
 * FECHA: 27/12/2019
-* DESCRIPCIÓN: Validación de las límitaciones de la técnica mediante la generación de datos sintéticos con distintos tipos de incertidumbre. Este experimento incluye las siguientes pruebas: 
-    * **01-data_faraway_original**: Predicción de incertidumbre en ejemplos lejos de la distribucción del dataset de entrenamiento
-    * **02-nongaussian_noise**: Addición de ruido en puntos especificos del dataset sintético
-    * **03-synthetic_data_distribution**: Generación de datos sintéticos con ruido no gausiano     
+* DESCRIPCIÓN: Validación de las límitaciones de la técnica mediante la generación de datos sintéticos con distintos tipos de incertidumbre.
 * RECURSOS:
-  * [Notebooks](on-the-fly/pytorch/02-uncertainty_validation)
+  * [01-data_faraway_original](on-the-fly/pytorch/02-uncertainty_validation), predicción de incertidumbre en ejemplos lejos de la distribucción del dataset de entrenamiento.
+  * [02-nongaussian_noise](on-the-fly/pytorch/02-uncertainty_validation), addición de ruido en puntos especificos del dataset sintético.
+  * [03-synthetic_data_distribution](on-the-fly/pytorch/02-uncertainty_validation): generación de datos sintéticos con ruido no gausiano.
+
 
 **03-loss_function_customization** (TODO: revisión)
 * FECHA: 24/12/2019
