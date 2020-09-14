@@ -55,14 +55,14 @@ Experimento original y pruebas derivadas del mismo
   * 02-nongaussian_noise: pruebas de validación de predicción de ruido no gausiano en puntos específicos
     * [Notebook](on-the-fly/pytorch/02-uncertainty_validation/02-nongaussian_noise/predicting-uncertainty-addedNonGaussianNoise.ipynb). Adición de ruido en puntos especificos del dataset sintético.
   * 03-synthetic_data_distribution: pruebas de validación de modelización de incertidumbre no gausiana
-    * [Notebook](on-the-fly/pytorch/03-synthetic_data_distribution/01-synthdata_noise_exp.ipynb). Generación de datos sintéticos con ruido no gausiano, usando una distribución exponencial estándar
-    * [Notebook](on-the-fly/pytorch/03-synthetic_data_distribution/01-synthdata_noise_uniform.ipynb). Prueba adicional de validación en datos sintéticos con addición de ruido no gausiano, usando una distribucción uniforme
+    * [Notebook](on-the-fly/pytorch/02-uncertainty_validation/03-synthetic_data_distribution/01-synthdata_noise_exp.ipynb). Generación de datos sintéticos con ruido no gausiano, usando una distribución exponencial estándar
+    * [Notebook](on-the-fly/pytorch/02-uncertainty_validation/03-synthetic_data_distribution/02-synthdata_noise_uniform.ipynb). Prueba adicional de validación en datos sintéticos con adición de ruido no gausiano, usando una distribucción uniforme
 
 **03-loss_function_customization** (TODO: revisión)
 * FECHA: 24/12/2019
 * DESCRIPCIÓN: pruebas realizadas modificando la función de pérdida con el objetivo de mejorar su compatibilidad con distintos frameworks y entender cómo se propaga el error en entrenamiento
 * RECURSOS:
-  * [Notebooks](on-the-fly/pytorch/03-loss_function_customization/loss_error_experiments.ipynb)
+  * [Notebook](on-the-fly/pytorch/03-loss_function_customization/loss_error_experiments.ipynb)
 
 #### Experimentos (TensorFlow)
 Reimplementación en TensorFlow y pruebas exhaustivas.
