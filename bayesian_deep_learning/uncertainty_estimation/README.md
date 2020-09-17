@@ -31,7 +31,7 @@ Hemos identificado estas dimensiones para describir la incertidumbre:
 
 ## Técnicas y experimentos
 
-### 1 - [Al vuelo](on-the-fly/README.md)
+### 1 - Al vuelo
 La técnica de estimación del error al vuelo es nuestro punto de entrada al reto y consiste en añadir (antes de entrenar) una salida más a nuestra red neuronal para que haga una estimación del error de predicción.
 
 Aunque los experimentos proporcionan un buen fundamento teórico de cómo aproximar el reto, los resultados desaconsejan usar esta técnica, en favor de otras que se ven a continuación. El principal problema viene de mezclar predicción y estimación del error de dicha predicción en el mismo proceso de aprendizaje, lo que trae problemas en el entrenamiento y dificulta la explicación del modelo al mezclar hipótesis.
@@ -55,8 +55,8 @@ Experimento original y pruebas derivadas del mismo
   * 02-nongaussian_noise: pruebas de validación de predicción de ruido no gausiano en puntos específicos
     * [Notebook](on-the-fly/pytorch/02-uncertainty_validation/02-nongaussian_noise/predicting-uncertainty-addedNonGaussianNoise.ipynb). Adición de ruido en puntos especificos del dataset sintético.
   * 03-synthetic_data_distribution: pruebas de validación de modelización de incertidumbre no gausiana
-    * [Notebook](on-the-fly/pytorch/02-uncertainty_validation/03-synthetic_data_distribution/01-synthdata_noise_exp.ipynb). Generación de datos sintéticos con ruido no gausiano, usando una distribución exponencial estándar
-    * [Notebook](on-the-fly/pytorch/02-uncertainty_validation/03-synthetic_data_distribution/02-synthdata_noise_uniform.ipynb). Prueba adicional de validación en datos sintéticos con adición de ruido no gausiano, usando una distribucción uniforme
+    * [Notebook](on-the-fly/pytorch/02-uncertainty_validation/03-synthetic_data_distributions/01-synthdata_noise_exp.ipynb). Generación de datos sintéticos con ruido no gausiano, usando una distribución exponencial estándar
+    * [Notebook](on-the-fly/pytorch/02-uncertainty_validation/03-synthetic_data_distributions/02-synthdata_noise_uniform.ipynb). Prueba adicional de validación en datos sintéticos con adición de ruido no gausiano, usando una distribucción uniforme
 
 **03-loss_function_customization** (TODO: revisión)
 * FECHA: 24/12/2019
