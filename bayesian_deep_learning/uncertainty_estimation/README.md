@@ -126,7 +126,7 @@ Tras evaluar las límitaciones de la técnica 'On the Fly' para modelar problem�
 
 **01-mixture_density_networks** (TODO: revisión)
 * FECHA: 20/06/2020
-* DESCRIPCIÓN: Aplicación del modelo MDN (Mixture Density Networks) para la estimación de la incertidumbre en el dataset sintético de 'On the Fly' y sobre el [dataset de precios de casas de Boston](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_boston.html). El objetivo es comparar está técnica con los resultados obtenidos en 'On the Fly'
+* DESCRIPCIÓN: Aplicación del modelo MDN (Mixture Density Networks) para la estimación de la incertidumbre en el dataset sintético de 'On the Fly' y sobre el [dataset de precios de casas de Boston](https://www.kaggle.com/puxama/bostoncsv). El objetivo es comparar está técnica con los resultados obtenidos en 'On the Fly'
 * RECURSOS:
   * [Notebook](mixture_density_networks/experiments/01-mixture_density_networks)
 
