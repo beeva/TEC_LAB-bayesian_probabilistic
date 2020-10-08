@@ -151,17 +151,6 @@ Llegamos a la técnica de la mano de su autor [Axel Brando](https://www.linkedin
   * [Notebook](umal/experiments/02-umal_forecasting)
   
 
-### 6 - Monte Carlo dropout
-
-(TODO: qué hacer con traffic ligths, no es nuestro código)
-
-#### Experimentos
-**MC-dropout**
-* FECHA: - (por hacer)
-* DESCRIPCIÓN: introducción a la técnica de Monte Carlo dropout.
-* RECURSOS:
-  * [Notebook](montecarlo_dropout/MC-dropout.ipynb)
-
 ## Otros documentos
 * [Contexto del reto en la industria](industry_uncertainty_estimation.md) 
 * [Estimación de la incertidumbre mediante técnicas frecuentistas](non_bayesian_techniques/frequentist_techniques.md)
