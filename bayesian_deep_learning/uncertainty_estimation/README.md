@@ -112,7 +112,7 @@ Si el concepto no es familiar, en esta [Introducción y referencias ](quantile_r
 * FECHA: 20/06/2020
 * DESCRIPCIÓN: Implementación de estimación de la incertidumbre en forecasting utilizando el dataset sintético de series temporales
 * RECURSOS:
-  * [Notebook](quantile_regression/deepquantile_lstm/03-dqr_lstm)
+  * [Notebook](quantile_regression/deepquantile_lstm/experiments/03-dqr_lstm)
 
 
 ### 4 - [Modelos de mixturas](mixture_density_networks/README.md)
