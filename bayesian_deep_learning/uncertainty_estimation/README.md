@@ -39,13 +39,13 @@ Aunque los experimentos proporcionan un buen fundamento teórico de cómo aproxi
 #### Experimentos (Pytorch)
 Experimento original y pruebas derivadas del mismo
 
-**01-initial_validation** (TODO: revisión)
+**01-initial_validation** 
 * FECHA: 11/12/2019
 * DESCRIPCIÓN: validación básica (reproducibilidad de resultados) del funcionamiento de la técnica.
 * RECURSOS:
   * [Notebook](on-the-fly/pytorch/01-initial_validation/initial_validation.ipynb)
 
-**02-uncertainty_validation**  (TODO: revisión)
+**02-uncertainty_validation**  
 * FECHA: 27/12/2019
 * DESCRIPCIÓN: validación de las límitaciones de la técnica mediante la generación de datos sintéticos con distintos tipos de incertidumbre.
 * RECURSOS:
@@ -58,7 +58,7 @@ Experimento original y pruebas derivadas del mismo
     * [Notebook](on-the-fly/pytorch/02-uncertainty_validation/03-synthetic_data_distributions/01-synthdata_noise_exp.ipynb). Generación de datos sintéticos con ruido no gausiano, usando una distribución exponencial estándar
     * [Notebook](on-the-fly/pytorch/02-uncertainty_validation/03-synthetic_data_distributions/02-synthdata_noise_uniform.ipynb). Prueba adicional de validación en datos sintéticos con adición de ruido no gausiano, usando una distribucción uniforme
 
-**03-loss_function_customization** (TODO: revisión)
+**03-loss_function_customization** 
 * FECHA: 24/12/2019
 * DESCRIPCIÓN: pruebas realizadas modificando la función de pérdida con el objetivo de mejorar su compatibilidad con distintos frameworks y entender cómo se propaga el error en entrenamiento
 * RECURSOS:
@@ -81,11 +81,15 @@ Comprendida la inconveniencia de estimar el error al vuelo y de las modificacion
 Aún no se ha realizado ningún experimento.
 
 
-### 3 - [Regresión cuantílica](quantile_regression/README.md)
+### 3 - Regresión cuantílica
+
 La regresión cuantílica nos permite hacer una predicción sobre un cuantíl concreto de la distribución de la variable respuesta. Este método nos permite estimar los valores de predicción en los extremos (superior e inferior) de la distribución, ofreciendo un intervalo de error en la predicción que usamos como medida de incertidumbre. 
 
 Por ejemplo, si queremos los valores extremos del intervalo que recogen el 50% de las observaciones, deberemos obtener dos predicciones, las asociadas a los cuantiles de orden 0.25 y 0.75 respectivamente.  
 Si ponemos el ejemplo del precio de una acción en bolsa y queremos saber cuál es la variabilidad en el 90% de los casos, obtendremos los cuantiles 0.05 y 0.95. Pongamos que salen 200$ y 250$, con lo que podríamos decir que el 90% de las veces, la variabilidad es de 50$.
+
+Si el concepto no es familiar, en esta [Introducción y referencias ](quantile_regression/README.md) se explora con algún ejemplo los conceptos alrededor de esta técnica para facilitar el comienzo.
+
 
 #### Experimentos
 
@@ -93,7 +97,10 @@ Si ponemos el ejemplo del precio de una acción en bolsa y queremos saber cuál 
 * FECHA: 01/06/2020
 * DESCRIPCIÓN: Benchmark básico con distintas técnicas de regresión cuantílica sobre el [dataset de precios de casas de Boston](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_boston.html) 
 * RECURSOS:
-  * [Notebook](quantile_regression/experiments/01-quantile_regression)
+  * Se exploran sobre diferentes modelos de ML la técnica de regresión cuantílica para comprenderla
+    * [Técnicas regresión cuantílica](quantile_regression/experiments/01-quantile_regression/quantile_regression_techniques.ipynb)
+  * Estudio y comprensión de la función de pérdidas empleada para la regresión cuantílica
+    * [Función de pérdidas](quantile_regression/experiments/01-quantile_regression/quantile_regression_loss_functions.ipynb)
 
 **02-lstm** (TODO: revisión)
 * FECHA: 10/06/2020

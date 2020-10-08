@@ -114,10 +114,39 @@ del número de habitaciones que sospechas que puede afectar a los datos.
 * **Estudio de tratamientos médicos** Queremos estudiar un tratamiento y queremos observar cómo se comporta en enfermedades raras y resulta muy costoso repetir el experimento o recoger más datos de ese sector poblacional 
 
 
-#### Referencias
+#### References
 
-[1] https://medium.com/analytics-vidhya/quantile-regression-and-prediction-intervals-e4a6a33634b4
-
-[2] https://otexts.com/fpp2/prediction-intervals.html
-
-[3] https://www.semanticscholar.org/paper/La-desigualdad-salarial-de-g%C3%A9nero-medida-por-el-del-Freitas/610f046522d329e917f1b090b89fdf0da604d7dc
+* [Wikipedia - Quantile](https://en.wikipedia.org/wiki/Quantile)
+* [ResearchGate - Kernel Conditional Quantile Estimation via Reduction Revisited](https://www.researchgate.net/publication/220766517_Kernel_Conditional_Quantile_Estimation_via_Reduction_Revisited)
+* [Quantile Regression—Theory, Implementations, and Applications](https://www.youtube.com/watch?v=GddvdXMJV9Y)
+* Quantile Regression - University of Copenhagen
+  * [An introduction](https://www.youtube.com/watch?v=pAKwoz05lK4)
+  * [The model](https://www.youtube.com/watch?v=L9qexifUKCw)
+  * [The criterion function](https://www.youtube.com/watch?v=sgR55l054DQ)
+  * [Pharmaceutical example](https://www.youtube.com/watch?v=D2SzCv02Jv8)
+* [Quantile regression post](https://medium.com/analytics-vidhya/quantile-regression-and-prediction-intervals-e4a6a33634b4)
+* [Prediction intervals](https://otexts.com/fpp2/prediction-intervals.html)
+* [Salary inequality with quantile regression](https://www.semanticscholar.org/paper/La-desigualdad-salarial-de-g%C3%A9nero-medida-por-el-del-Freitas/610f046522d329e917f1b090b89fdf0da604d7dc)
+* [eco621] Quantile regression: 
+[01](https://www.youtube.com/watch?v=-D2JkIh0MJI), 
+[02](https://www.youtube.com/watch?v=Bm4ibgSatGo), 
+[03](https://www.youtube.com/watch?v=wIVxnEvggDM), 
+[04](https://www.youtube.com/watch?v=lDbPftcWKsQ), 
+[05](https://www.youtube.com/watch?v=c_9BT04o1nU), 
+[06](https://www.youtube.com/watch?v=YLiHfy0dFEM), 
+[07](https://www.youtube.com/watch?v=kqfk21wVxaY), 
+[08](https://www.youtube.com/watch?v=mAXlMnV_QCY), 
+[09](https://www.youtube.com/watch?v=XFNuFyIK_v4), 
+[10](https://www.youtube.com/watch?v=IHuTk-ksYl4), 
+[11](https://www.youtube.com/watch?v=rWG4k6Lb-TI) and 
+[12](https://www.youtube.com/watch?v=yvJQNTE9ptU)
+* [Three Things You Should Know about Quantile Regression](https://www.youtube.com/watch?v=CU0ofd3hSOA)
+* Applications
+  * [Application of quantile regressions to modelling spatial distributions](https://www.youtube.com/watch?v=XvHQTBQTv6c)
+  * [Quantile Regression in Ecology](https://www.youtube.com/watch?v=k8mZrNoKFIg)
+  * [IV Quantile Regression for Group-Level Treatments](https://www.youtube.com/watch?v=1ngRz6YH6_U)
+  
+  
+### Pinball Loss
+* [Quantile loss function for machine learning](https://www.evergreeninnovations.co/blog-quantile-loss-function-for-machine-learning/)
+* [arXiv - Estimating conditional quantiles with the help of the pinball loss](https://arxiv.org/abs/1102.2101)
