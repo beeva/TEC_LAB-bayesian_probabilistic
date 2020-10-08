@@ -106,13 +106,15 @@ Si el concepto no es familiar, en esta [Introducción y referencias ](quantile_r
 * FECHA: 10/06/2020
 * DESCRIPCIÓN: Implementación del módelo más básico de LSTM con aplicación en un dataset sintético de series temporales
 * RECURSOS:
-  * [Notebook](quantile_regression/lstm/experiments/02-lstm)
+  * [Notebook](quantile_regression/lstm/experiments/02-lstm/time_series_lstm_example.ipynb)
 
 **03-deepquantile_lstm** (TODO: revisión)
 * FECHA: 20/06/2020
 * DESCRIPCIÓN: Implementación de estimación de la incertidumbre en forecasting utilizando el dataset sintético de series temporales
 * RECURSOS:
-  * [Notebook](quantile_regression/deepquantile_lstm/experiments/03-dqr_lstm)
+  * [Lstm deep quantile regression con datos sintéticos](quantile_regression/deepquantile_lstm/experiments/03-dqr_lstm/lstm_dqr_synthdata.ipynb)
+  * [Quantile regression con LSTM](quantile_regression/deepquantile_lstm/experiments/03-dqr_lstm/quantile_regression+LSTM.ipynb)
+  * [Ejemplo de lstm con series temporales](quantile_regression/deepquantile_lstm/experiments/03-dqr_lstm/time_series_lstm_example.ipynb)
 
 
 ### 4 - [Modelos de mixturas](mixture_density_networks/README.md)
