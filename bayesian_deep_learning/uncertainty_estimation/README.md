@@ -97,10 +97,10 @@ Si el concepto no es familiar, en esta [Introducción y referencias ](quantile_r
 * FECHA: 01/06/2020
 * DESCRIPCIÓN: Benchmark básico con distintas técnicas de regresión cuantílica sobre el [dataset de precios de casas de Boston](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_boston.html) 
 * RECURSOS:
-  * Se exploran sobre diferentes modelos de ML la técnica de regresión cuantílica para comprenderla
-    * [Técnicas regresión cuantílica](quantile_regression/experiments/01-quantile_regression/01-quantile_regression_techniques.ipynb)
-  * Estudio y comprensión de la función de pérdidas empleada para la regresión cuantílica
-    * [Función de pérdidas](quantile_regression/experiments/01-quantile_regression/02-quantile_regression_loss_function.ipynb)
+  * 01-quantile_regression_techniques
+    * [Notebook](quantile_regression/experiments/01-quantile_regression/01-quantile_regression_techniques.ipynb). Se exploran sobre diferentes modelos de ML la técnica de regresión cuantílica para comprenderla
+    * [Notebook](quantile_regression/experiments/01-quantile_regression/02-quantile_regression_loss_function.ipynb). Estudio y comprensión de la función de pérdidas empleada para la regresión cuantílica
+
 
 **02-lstm** (TODO: revisión)
 * FECHA: 10/06/2020
