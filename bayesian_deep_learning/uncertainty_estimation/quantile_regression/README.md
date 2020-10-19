@@ -7,7 +7,7 @@ En está página se explica la regresión cuantílica como solución técnica pa
 - [Regresión cuantílica en el contexto de medición de la incertidumbre](#cuantil-incertidumbre)
 - [Implementación de la regresión cuantílica](#implementacion)
   - [Técnicas de regresión cuantílica](#tecnicas)
-  - [Validación - Función de pérdida](#validacion)
+  - [Función de pérdida](#validacion)
 
 - [Aplicación en la problemática Forecasting](#AplicaciónForecasting)
     - [¿Por que utilizar intervalos de predicción o cuantiles en Forecasting?](#forecast-incertidumbre)
