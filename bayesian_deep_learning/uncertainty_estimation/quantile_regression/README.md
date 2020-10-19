@@ -9,7 +9,7 @@ En está página se explica la regresión cuantílica como solución técnica pa
   - [Técnicas de regresión cuantílica](#tecnicas)
   - [Validación - Función de pérdida](#validacion)
 
-- [Aplicación en la problemática Forecasting](#implementacion)
+- [Aplicación en la problemática Forecasting](#AplicaciónForecasting)
     - [¿Por que utilizar intervalos de predicción o cuantiles en Forecasting?](#forecast-incertidumbre)
     - [Forecasting con LSTM y regresión cuantílica](./deepquantile_lstm/README.md)
 
@@ -70,6 +70,8 @@ Esto ofrece la capacidad de poder estimar un cuantil concreto de la distribucci�
 
 *Notebook de referencia: [quantile_regression_loss_function.ipynb](./quantile_regression_loss_function.ipynb)*
 
+<a name="AplicaciónForecasting"></a>
+## Aplicación en la problemática Forecasting
 
 <a name="forecast-incertidumbre"></a>
 #### ¿Por que utilizar intervalos de predicción o cuantiles en Forecasting?
