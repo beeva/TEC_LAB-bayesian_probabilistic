@@ -81,7 +81,7 @@ Comprendida la inconveniencia de estimar el error al vuelo y de las modificacion
 Aún no se ha realizado ningún experimento.
 
 
-### 3 - Regresión cuantílica(quantile_regression/README.md)
+### 3 - [Regresión cuantílica](quantile_regression/README.md)
 
 La regresión cuantílica nos permite hacer una predicción sobre un cuantíl concreto de la distribución de la variable respuesta. Este método nos permite estimar los valores de predicción en los extremos (superior e inferior) de la distribución, ofreciendo un intervalo de error en la predicción que usamos como medida de incertidumbre. 
 
