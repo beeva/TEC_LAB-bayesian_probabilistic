@@ -81,7 +81,7 @@ Comprendida la inconveniencia de estimar el error al vuelo y de las modificacion
 Aún no se ha realizado ningún experimento.
 
 
-### 3 - Regresión cuantílica
+### 3 - [Regresión cuantílica](quantile_regression/README.md)
 
 La regresión cuantílica nos permite hacer una predicción sobre un cuantíl concreto de la distribución de la variable respuesta. Este método nos permite estimar los valores de predicción en los extremos (superior e inferior) de la distribución, ofreciendo un intervalo de error en la predicción que usamos como medida de incertidumbre. 
 
@@ -98,9 +98,9 @@ Si el concepto no es familiar, en esta [Introducción y referencias ](quantile_r
 * DESCRIPCIÓN: Benchmark básico con distintas técnicas de regresión cuantílica sobre el [dataset de precios de casas de Boston](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_boston.html) 
 * RECURSOS:
   * Se exploran sobre diferentes modelos de ML la técnica de regresión cuantílica para comprenderla
-    * [Técnicas regresión cuantílica](quantile_regression/experiments/01-quantile_regression/quantile_regression_techniques.ipynb)
+    * [Técnicas regresión cuantílica](quantile_regression/experiments/01-quantile_regression/01-quantile_regression_techniques.ipynb)
   * Estudio y comprensión de la función de pérdidas empleada para la regresión cuantílica
-    * [Función de pérdidas](quantile_regression/experiments/01-quantile_regression/quantile_regression_loss_functions.ipynb)
+    * [Función de pérdidas](quantile_regression/experiments/01-quantile_regression/02-quantile_regression_loss_function.ipynb)
 
 **02-lstm** (TODO: revisión)
 * FECHA: 10/06/2020

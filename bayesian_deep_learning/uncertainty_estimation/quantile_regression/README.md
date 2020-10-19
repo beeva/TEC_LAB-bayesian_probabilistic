@@ -3,13 +3,13 @@ En está página se explica la regresión cuantílica como solución técnica pa
 
 
 ### Indice de contenidos
-- [Introducción a la técnica](#introduccion)
-- [Regresión cuantílica en la medición de la incertidumbre](#cuantil-incertidumbre)
+- [Introducción](#introduccion)
+- [Regresión cuantílica en el contexto de medición de la incertidumbre](#cuantil-incertidumbre)
 - [Implementación de la regresión cuantílica](#implementacion)
   - [Técnicas de regresión cuantílica](#tecnicas)
-  - [Validación - Función de pérdida](#validacion)
+  - [Función de pérdida](#validacion)
 
-- [Estimación de la incertumbre en Forecasting](#implementacion)
+- [Aplicación en la problemática Forecasting](#AplicaciónForecasting)
     - [¿Por que utilizar intervalos de predicción o cuantiles en Forecasting?](#forecast-incertidumbre)
     - [Forecasting con LSTM y regresión cuantílica](./deepquantile_lstm/README.md)
 
@@ -21,7 +21,7 @@ En está página se explica la regresión cuantílica como solución técnica pa
 La **regresión cuantílica** tiene como objetivo aproximar la mediana condicional u otros **cuantiles** (proporción τ de la distribución) de la variable de respuesta [2]
 
 <a name="cuantil-incertidumbre"></a>
-### Regresión cuantílica en la medición de la incertidumbre
+### Regresión cuantílica en el contexto de medición de la incertidumbre
 
 En el siguiente gráfico vemos la aplicación de **regresión cuantílica en el dataset de precios de vivienda de boston**. En este ejemplo se busca encontrar una relación entre el precio de la vivienda y el número de habitaciones para responder preguntas del tipo **¿Cuánto cuesta una vivienda de 5 habitaciones?**
 
@@ -34,34 +34,10 @@ En este ejemplo concretamente se realiza **un ajuste de 5 regresiones cuantiles 
 
 Cómo se puede observar en el gráfico además la varianza del precio de la vivienda **no es constante u homocedastica**, por lo que es necesario proporcionar una medida de fiabilidad sobre esa posible variación o margen de error de las predicciones. Utilizar un **estimador más robusto basado en la mediana** se ve menos afectado por los outliers que la regresión lineal que aproxima la media.
 
-<a name="forecast-incertidumbre"></a>
-#### ¿Por que utilizar intervalos de predicción o cuantiles en Forecasting?
+<a name="implementacion"></a>
+### Implementación de la regresión cuantílica
 
-En problemas de forecasting se suele hacer forecasting sobre distintos horizontes de tiempo. Esto tiene una **implicación en la incertidumbre y varianza de las predicciones**
-
-El cálculo de esta varianza o intervalo de predicción en forecasting en el h-instante (h:horizonte) de la variable respuesta y con una desviación estándar σₕ, puede ser calculada como:
-
-<p align="center"><img src="./img/forecast_variance.png" height="50" alt=“Ejemplo de regresión cuantílica” /></p>
-<p align="center"><em>Estimación de la varianza de forecasting en el instante u horizonte h</em><sup>[2]</sup></p>
-
-La constante c depende de la cobertura de probabilidades. Estos valores se pueden encontrar [aqui](https://otexts.com/fpp2/prediction-intervals.html)
-
-Un característica importante de los intervalo de predicción es que incrementan con el horizonte. Cuánto más lejano sea el horizonte de tiempo al que hacemos forecasting, mayor será la incertidumbre asociada con esta predicción y más amplio será el intervalo de predicción
-
-<a name="validacion"></a>
-####  Función de Pérdida
-
-La **función de pérdida de la regresión cuantílica** minimiza una suma con **penalizaciones asimétricas** para las sobre-predicciones (aquellas predecciones que se realizan por encima del valor real) y las infra-predicciones (aquellas que están por debajo) de tal forma que **para un mismo quantile o valor de q, las penzalizaciones que se aplican sobre estas predicciones son diferentes**
-
-En concreto, se observa que los errores más positivos (sobre-predicciones) son penalizados más en los cuantiles superiores (se tienen más en cuenta) y los errores más negativos (infra-predicciones) se penalizan más en los cuantiles inferiores. En el caso del cuantil 50 o mediana, se penaliza por igual
-
-Esto ofrece la capacidad de poder estimar un cuantil concreto de la distribucción de la variable respuesta como se muestra en el siguiente cuadro:
-
-<p align="center"><img src="./img/loss_quantile_learn.PNG" height="270" alt=“Métodos de aproximación de la variable respuesta” /></p>
-<p align="center"><em>Métodos de aproximación de la variable respuesta</em><sup></sup></p>
-
-
-*Notebook de referencia: [quantile_regression_loss_function.ipynb](./quantile_regression_loss_function.ipynb)*
+Se han implementado dos notebooks, uno sobre [técnicas de regresión cuantílica](experiments/V5.1.0-quantile_regression/quantile_regression_techniques.ipynb) y otro sobre [funciones de pérdida en regresiones cuantílicas](experiments/V5.1.0-quantile_regression/quantile_regression_loss_functions.ipynb)
 
 
 <a name="tecnicas"></a>
@@ -79,10 +55,38 @@ Métodos implementados:
 
 *Notebook de referencia: [quantile_regression_techniques.ipynb](./quantile_regression_techniques.ipynb)*
 
-<a name="implementacion"></a>
-### Implementación de la regresión cuantílica
+<a name="validacion"></a>
+####  Función de Pérdida
 
-Se han implementado dos notebooks, uno sobre [técnicas de regresión cuantílica](experiments/V5.1.0-quantile_regression/quantile_regression_techniques.ipynb) y otro sobre [funciones de pérdida en regresiones cuantílicas](experiments/V5.1.0-quantile_regression/quantile_regression_loss_functions.ipynb)
+La **función de pérdida de la regresión cuantílica** minimiza una suma con **penalizaciones asimétricas** para las sobre-predicciones (aquellas predecciones que se realizan por encima del valor real) y las infra-predicciones (aquellas que están por debajo) de tal forma que **para un mismo quantile o valor de q, las penzalizaciones que se aplican sobre estas predicciones son diferentes**
+
+En concreto, se observa que los errores más positivos (sobre-predicciones) son penalizados más en los cuantiles superiores (se tienen más en cuenta) y los errores más negativos (infra-predicciones) se penalizan más en los cuantiles inferiores. En el caso del cuantil 50 o mediana, se penaliza por igual
+
+Esto ofrece la capacidad de poder estimar un cuantil concreto de la distribucción de la variable respuesta como se muestra en el siguiente cuadro:
+
+<p align="center"><img src="./img/loss_quantile_learn.PNG" height="270" alt=“Métodos de aproximación de la variable respuesta” /></p>
+<p align="center"><em>Métodos de aproximación de la variable respuesta</em><sup></sup></p>
+
+
+*Notebook de referencia: [quantile_regression_loss_function.ipynb](./quantile_regression_loss_function.ipynb)*
+
+<a name="AplicaciónForecasting"></a>
+## Aplicación en la problemática Forecasting
+
+<a name="forecast-incertidumbre"></a>
+#### ¿Por que utilizar intervalos de predicción o cuantiles en Forecasting?
+
+En problemas de forecasting se suele hacer forecasting sobre distintos horizontes de tiempo. Esto tiene una **implicación en la incertidumbre y varianza de las predicciones**
+
+El cálculo de esta varianza o intervalo de predicción en forecasting en el h-instante (h:horizonte) de la variable respuesta y con una desviación estándar σₕ, puede ser calculada como:
+
+<p align="center"><img src="./img/forecast_variance.png" height="50" alt=“Ejemplo de regresión cuantílica” /></p>
+<p align="center"><em>Estimación de la varianza de forecasting en el instante u horizonte h</em><sup>[2]</sup></p>
+
+La constante c depende de la cobertura de probabilidades. Estos valores se pueden encontrar [aqui](https://otexts.com/fpp2/prediction-intervals.html)
+
+Un característica importante de los intervalo de predicción es que incrementan con el horizonte. Cuánto más lejano sea el horizonte de tiempo al que hacemos forecasting, mayor será la incertidumbre asociada con esta predicción y más amplio será el intervalo de predicción
+
 
 <a name="aplicaciones"></a>
 ### Otras aplicaciones de la regresión cuantílica
