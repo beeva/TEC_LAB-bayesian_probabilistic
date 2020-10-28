@@ -112,9 +112,9 @@ Si el concepto no es familiar, en esta [Introducción y referencias ](quantile_r
 * FECHA: 20/06/2020
 * DESCRIPCIÓN: Implementación de estimación de la incertidumbre en forecasting utilizando el dataset sintético de series temporales
 * RECURSOS:
-  * [Lstm deep quantile regression con datos sintéticos](quantile_regression/deepquantile_lstm/experiments/03-dqr_lstm/lstm_dqr_synthdata.ipynb)
-  * [Quantile regression con LSTM](quantile_regression/deepquantile_lstm/experiments/03-dqr_lstm/quantile_regression+LSTM.ipynb) (TODO: work-in-progress)
-
+  * lstm_dqr_synthdata
+	  * [Notebook](quantile_regression/deepquantile_lstm/experiments/03-dqr_lstm/lstm_dqr_synthdata.ipynb). Aplicación de quantile (deep) learning a la problemática de estimación de la incertidumbre en forecasting 
+  * [Notebook](quantile_regression/deepquantile_lstm/experiments/03-dqr_lstm/quantile_regression+LSTM.ipynb). Implementación de la quantile (deep) learning en tensorflow (TODO: work-in-progress)
 
 ### 4 - [Modelos de mixturas](mixture_density_networks/README.md)
 El modelo de mixturas son modelos probabilísticos que nos permite representar la modelizar la presencia de sub-poblaciones de la población general. Esta técnica nos permite modelar distribuciones más complejas que se alejen en forma de una distribucción normal.
