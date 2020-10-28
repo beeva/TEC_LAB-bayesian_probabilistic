@@ -93,7 +93,7 @@ Si el concepto no es familiar, en esta [Introducción y referencias ](quantile_r
 
 #### Experimentos
 
-**01-quantile_regression** (TODO: revisión)
+**01-quantile_regression** 
 * FECHA: 01/06/2020
 * DESCRIPCIÓN: Benchmark básico con distintas técnicas de regresión cuantílica sobre el [dataset de precios de casas de Boston](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_boston.html) 
 * RECURSOS:
@@ -102,19 +102,18 @@ Si el concepto no es familiar, en esta [Introducción y referencias ](quantile_r
     * [Notebook](quantile_regression/experiments/01-quantile_regression/02-quantile_regression_loss_function.ipynb). Estudio y comprensión de la función de pérdidas empleada para la regresión cuantílica
 
 
-**02-lstm** (TODO: revisión)
+**02-lstm** (TODO: work-in-progress)
 * FECHA: 10/06/2020
 * DESCRIPCIÓN: Implementación del módelo más básico de LSTM con aplicación en un dataset sintético de series temporales
 * RECURSOS:
   * [Notebook](quantile_regression/lstm/experiments/02-lstm/time_series_lstm_example.ipynb)
 
-**03-deepquantile_lstm** (TODO: revisión)
+**03-deepquantile_lstm** 
 * FECHA: 20/06/2020
 * DESCRIPCIÓN: Implementación de estimación de la incertidumbre en forecasting utilizando el dataset sintético de series temporales
 * RECURSOS:
   * [Lstm deep quantile regression con datos sintéticos](quantile_regression/deepquantile_lstm/experiments/03-dqr_lstm/lstm_dqr_synthdata.ipynb)
-  * [Quantile regression con LSTM](quantile_regression/deepquantile_lstm/experiments/03-dqr_lstm/quantile_regression+LSTM.ipynb)
-  * [Ejemplo de lstm con series temporales](quantile_regression/deepquantile_lstm/experiments/03-dqr_lstm/time_series_lstm_example.ipynb)
+  * [Quantile regression con LSTM](quantile_regression/deepquantile_lstm/experiments/03-dqr_lstm/quantile_regression+LSTM.ipynb) (TODO: work-in-progress)
 
 
 ### 4 - [Modelos de mixturas](mixture_density_networks/README.md)
