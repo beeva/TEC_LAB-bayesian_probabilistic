@@ -83,7 +83,7 @@ Aún no se ha realizado ningún experimento.
 
 ### 3 - [Regresión cuantílica](quantile_regression/README.md)
 
-La regresión cuantílica nos permite hacer una predicción sobre un cuantíl concreto de la distribución de la variable respuesta. Este método nos permite estimar los valores de predicción en los extremos (superior e inferior) de la distribución, ofreciendo un intervalo de error en la predicción que usamos como medida de incertidumbre. 
+La regresión cuantílica nos permite hacer una predicción sobre un [cuantíl](https://es.wikipedia.org/wiki/Cuantil) concreto de la distribución de la variable respuesta. Este método nos permite estimar los valores de predicción en los extremos (superior e inferior) de la distribución, ofreciendo un intervalo de error en la predicción que usamos como medida de incertidumbre. 
 
 Por ejemplo, si queremos los valores extremos del intervalo que recogen el 50% de las observaciones, deberemos obtener dos predicciones, las asociadas a los cuantiles de orden 0.25 y 0.75 respectivamente.  
 Si ponemos el ejemplo del precio de una acción en bolsa y queremos saber cuál es la variabilidad en el 90% de los casos, obtendremos los cuantiles 0.05 y 0.95. Pongamos que salen 200$ y 250$, con lo que podríamos decir que el 90% de las veces, la variabilidad es de 50$.
