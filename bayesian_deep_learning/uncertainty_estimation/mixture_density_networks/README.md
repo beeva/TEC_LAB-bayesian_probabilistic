@@ -13,9 +13,31 @@ En está página se explica **los modelos de mixturas** como solución técnica 
 
 Un **modelo de mixturas** es un modelo probabilístico que nos permite representar la presencia de sub-poblaciones de la población general. Esta representación de sub-poblaciones nos va a permitir construir un estimador más robusto en el caso en el que la distribución de la variable respuesta sea heterogénea
 
+En el siguiente gráfico tenemos un ejemplo de variable y heterogénea (el precio medio de unos casos) viendo este gráfico podemos inferir que podríamos tener 3 tipos de casos diferentes: uno de precio bajo ~$30, medio ~$60, y alto ~$120. Sin embargo, las variableso proceso que causan estas fluctaciones de precios realmente no las tenemos ni las conocemos (son variables latentes).   
+
+<p align="center"><img src="./img/mixture_models.png" height="160" alt="Mixture Density Network" /></p>
+<p align="center">Mixture Density Network</p>
+
+
+### Motivación 
+
+Si modelaramos este tipo de incertidumbre mediante técnicas como 'on-the-fly' obtendriamos la distribucción de la izquierda donde ignoramos las distintas fuentes que causan las fluctaciones en el precio, aunque la incertidumbre global seguiria siendo válida. Por el contrario,  los modelos de mixturas si son capaces de modelar distitnas fuentes de incertidumbre y aproximar una distribución N modal que se ajusta más a la distribucción real.
+
+
+### Implementación 
+
+El problema que surje al estimar la distribucción y es por un lado ni conocemos los distintos procesos que generan esas sub-poblaciones ni a que sub-población pertenece una observación concreta. Por ello, se utiliza el algoritmo de Maximum Likelihood Estimation que se explica en el siguiente [post de referencia](https://towardsdatascience.com/gaussian-mixture-models-and-expectation-maximization-a-full-explanation-50fa94111ddd).
+
+<a name="MLE"></a>
+#### MLE - Maximum Likelihood Estimation
+
+El algoritmo de MLE o máxima verosimilitud nos permite obtener los parámetros del modelo o distribución que maximizan la probabibilidad de obtener unos datos dados.
+
+Referencia - [Ejemplo de cálculo de MLE para la implementación de la función de pérdida](https://towardsdatascience.com/maximum-likelihood-estimation-explained-normal-distribution-6207b322e47f#:~:text=%E2%80%9CA%20method%20of%20estimating%20the,observed%20data%20is%20most%20probable.%E2%80%9D&text=Let's%20say%20we%20have%20some,that%20it%20is%20normally%20distributed)
+
 
 <a name="mdn"></a>
-### Mixture Density Networks
+## Mixture Density Networks
 
 Las **redes de densidad mixta** (Bishop, 1994) es un tipo de red que combina las redes convencionales con el concepto de modelo de mixturas. En este modelo, la sálida de la DNN hace la estimación de parámetros para la familia de distribuciones o componentes seleccionadas las cuales se suman teniendo en cuenta el coeficiente de mezcla ⍺ para obtener finalmente una distribucción condicional hetérogena de y respecto a la entrada: 
 
@@ -35,12 +57,6 @@ En esta fórmula los parámetros tiene la siguiente semántica:
 * **λ son los parámetros de la distribución 𝒟**. En el caso denotamos 𝒟 como una distribución gausiana, estos parametros corresponderian a λ1 sería la media condicional mean μ(x) y 
 λ2 la desviación estándar σ(x). Las distribuciones pueden tener distinto número de parámetros (e.g.: Bernoulli and Chi2 tienen 1 parámetro, Beta tiene 2, y la gaussiana truncada tiene hasta 4 parámetros) Estos son parámetros que forman también la salida de la red.
 
-<a name="MLE"></a>
-### MLE - Maximum Likelihood Estimation
-
-El algoritmo de MLE o máxima verosimilitud nos permite obtener los parámetros del modelo o distribución que maximizan la probabibilidad de obtener unos datos dados.
-
-Referencia - [Ejemplo de cálculo de MLE para la implementación de la función de pérdida](https://towardsdatascience.com/maximum-likelihood-estimation-explained-normal-distribution-6207b322e47f#:~:text=%E2%80%9CA%20method%20of%20estimating%20the,observed%20data%20is%20most%20probable.%E2%80%9D&text=Let's%20say%20we%20have%20some,that%20it%20is%20normally%20distributed)
 
 
 ### Aplicaciones
