@@ -1,5 +1,5 @@
-## Mixture Models
-En está página se explica **los modelos de mixturas** como solución técnica para aproximar distribuciones heterogéneas de la variable respuesta. Este es el caso en el que sabemos que los datos u observaciones provienen de fuentes o procesos diferentes conocidos.
+## Mixture Density Networks
+En está página se explica brevemente **las redes de densidad mixta** como solución técnica para aproximar distribuciones heterogéneas de la variable respuesta. Este es el caso en el que sabemos que los datos u observaciones provienen de fuentes o procesos diferentes conocidos. Para ello, primero se incluye una breve introducción a **modelos de mixturas** que es a la familia a la que pertence este tipo de red.
 
 
 ### Indice de contenidos
@@ -41,7 +41,7 @@ Referencia - [Ejemplo de cálculo de MLE para la implementación de la función 
 <a name="mdn"></a>
 ## Mixture Density Networks
 
-Las **redes de densidad mixta** (Bishop, 1994) es un tipo de red que combina las redes convencionales con el concepto de modelo de mixturas. En este modelo, la sálida de la DNN hace la estimación de parámetros para la familia de distribuciones o componentes seleccionadas las cuales se suman teniendo en cuenta el coeficiente de mezcla ⍺ para obtener finalmente una distribucción condicional hetérogena de y respecto a la entrada: 
+Las **redes de densidad mixta** (Bishop, 1994) es un tipo de red que combina las redes convencionales con *el concepto de modelo de mixturas*. En este modelo, la sálida de la DNN hace la estimación de parámetros para la familia de distribuciones o componentes seleccionadas las cuales se suman teniendo en cuenta el coeficiente de mezcla ⍺ para obtener finalmente una distribucción condicional hetérogena de y respecto a la entrada: 
 
 <p align="center"><img src="./img/MDN.png" height="160" alt="Mixture Density Network" /></p>
 <p align="center">Mixture Density Network</p>
