@@ -13,7 +13,7 @@ En está página se explica **los modelos de mixturas** como solución técnica 
 
 Un **modelo de mixturas** es un modelo probabilístico que nos permite representar la presencia de sub-poblaciones de la población general. Esta representación de sub-poblaciones nos va a permitir construir un estimador más robusto en el caso en el que la distribución de la variable respuesta sea heterogénea
 
-En el siguiente gráfico tenemos un ejemplo de variable y heterogénea (el precio medio de unos casos) viendo este gráfico podemos inferir que podríamos tener 3 tipos de casos diferentes: uno de precio bajo ~$30, medio ~$60, y alto ~$120. Sin embargo, las variableso proceso que causan estas fluctaciones de precios realmente no las tenemos ni las conocemos (son variables latentes).   
+En el siguiente gráfico tenemos un ejemplo de variable y heterogénea (el precio medio de unos casos) viendo este gráfico podemos inferir que podríamos tener 3 tipos de casos diferentes: uno de precio bajo ~$30, medio ~$60, y alto ~$120. Sin embargo, las variables o procesos que causan estas fluctaciones de precios realmente no las tenemos ni las conocemos (son variables latentes).   
 
 <p align="center"><img src="./img/mixture_models.png" height="160" alt="Mixture Density Network" /></p>
 <p align="center">Mixture Density Network</p>
@@ -21,12 +21,12 @@ En el siguiente gráfico tenemos un ejemplo de variable y heterogénea (el preci
 
 ### Motivación 
 
-Si modelaramos este tipo de incertidumbre mediante técnicas como 'on-the-fly' obtendriamos la distribucción de la izquierda donde ignoramos las distintas fuentes que causan las fluctaciones en el precio, aunque la incertidumbre global seguiria siendo válida. Por el contrario,  los modelos de mixturas si son capaces de modelar distitnas fuentes de incertidumbre y aproximar una distribución N modal que se ajusta más a la distribucción real.
+Si modelaramos este tipo de incertidumbre mediante técnicas como 'on-the-fly' obtendriamos la distribucción de la izquierda donde ignoramos las distintas fuentes que causan las fluctaciones en el precio, aunque la incertidumbre global seguiria siendo válida. Por el contrario, los modelos de mixturas si son capaces de modelar distitnas fuentes de incertidumbre y aproximar una distribución N modal que se ajusta más a la distribucción real.
 
 
 ### Implementación 
 
-El problema que surje al estimar la distribucción y es por un lado ni conocemos los distintos procesos que generan esas sub-poblaciones ni a que sub-población pertenece una observación concreta. Por ello, se utiliza el algoritmo de Maximum Likelihood Estimation que se explica en el siguiente [post de referencia](https://towardsdatascience.com/gaussian-mixture-models-and-expectation-maximization-a-full-explanation-50fa94111ddd).
+El problema que surje al estimar la distribucción de y es que por un lado ni conocemos los distintos procesos que generan esas sub-poblaciones ni a que sub-población pertenece una observación concreta. Para esto, se utiliza el algoritmo de Maximum Likelihood Estimation que se explica en el siguiente [post de referencia](https://towardsdatascience.com/gaussian-mixture-models-and-expectation-maximization-a-full-explanation-50fa94111ddd).
 
 <a name="MLE"></a>
 #### MLE - Maximum Likelihood Estimation
@@ -56,7 +56,6 @@ En esta fórmula los parámetros tiene la siguiente semántica:
 * **𝒟  esta es la correspondiente distribución de entrada a ser mezclada**. La distribución puede ser elegida atendiendo al tipo de aplicación.
 * **λ son los parámetros de la distribución 𝒟**. En el caso denotamos 𝒟 como una distribución gausiana, estos parametros corresponderian a λ1 sería la media condicional mean μ(x) y 
 λ2 la desviación estándar σ(x). Las distribuciones pueden tener distinto número de parámetros (e.g.: Bernoulli and Chi2 tienen 1 parámetro, Beta tiene 2, y la gaussiana truncada tiene hasta 4 parámetros) Estos son parámetros que forman también la salida de la red.
-
 
 
 ### Aplicaciones
