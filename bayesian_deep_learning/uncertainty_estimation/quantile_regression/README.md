@@ -18,7 +18,7 @@ En está página se explica la regresión cuantílica como solución técnica pa
 <a name="introduccion"></a>
 ## Introducción
 
-La **regresión cuantílica** tiene como objetivo aproximar la mediana condicional u otros **cuantiles** (proporción τ de la distribución) de la variable de respuesta [2]
+La [**regresión cuantílica**](https://towardsdatascience.com/quantile-regression-ff2343c4a03) tiene como objetivo aproximar la mediana condicional u otros [**cuantiles**](https://en.wikipedia.org/wiki/Quantile) (proporción τ de la distribución) de la variable de respuesta [2]
 
 <a name="cuantil-incertidumbre"></a>
 ### Regresión cuantílica en el contexto de medición de la incertidumbre
