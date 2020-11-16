@@ -127,7 +127,7 @@ Tras evaluar las límitaciones de la técnica 'On the Fly' para modelar problem�
 * FECHA: 20/06/2020
 * DESCRIPCIÓN: Aplicación del modelo MDN (Mixture Density Networks) para la estimación de la incertidumbre en el dataset sintético de 'On the Fly' y sobre el [dataset de precios de casas de Boston](https://www.kaggle.com/puxama/bostoncsv). El objetivo es comparar está técnica con los resultados obtenidos en 'On the Fly'
 * RECURSOS:
-  * [Notebook](mixture_density_networks/experiments/01-mixture_density_networks)
+  * [Notebook](mixture_density_networks/experiments/01-mixture_density_networks/mixture_density_networks_regression.ipynb)
 
 ### 5 - [UMAL - Uncountable Mixture Asymetric Laplacian](umal/README.md)
 [UMAL (Uncountable Mixture Asymetric Laplacian)](https://arxiv.org/abs/1910.12288) es una técnica avanzada que nos provee de características muy interesantes para la toma de decisiones en entornos de alta incertidumbre.__
