@@ -23,7 +23,7 @@ En el siguiente gráfico tenemos un ejemplo de variable heterogénea *y* (el pre
 <a name="motivacion"></a>
 ### Motivación 
 
-Si modelaramos este tipo de incertidumbre mediante técnicas como ['on-the-fly'](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/tree/master/bayesian_deep_learning/uncertainty_estimation#1---al-vuelo) obtendriamos la distribucción de la izquierda, donde ignoramos las distintas fuentes que causan las fluctaciones en el precio, aunque la incertidumbre global seguiría siendo válida. Por el contrario, los modelos de mixturas si son capaces de modelar distitnas fuentes de incertidumbre y aproximar una distribución N modal (que contiene N modos) que se ajuste más a la distribucción real.
+Si modelaramos este tipo de incertidumbre mediante técnicas como ['on-the-fly'](../../uncertainty_estimation#1---al-vuelo) obtendriamos la distribucción de la izquierda, donde ignoramos las distintas fuentes que causan las fluctaciones en el precio, aunque la incertidumbre global seguiría siendo válida. Por el contrario, los modelos de mixturas si son capaces de modelar distitnas fuentes de incertidumbre y aproximar una distribución N modal (que contiene N modos) que se ajuste más a la distribucción real.
 
 <a name="implementacion"></a>
 ### Implementación 
