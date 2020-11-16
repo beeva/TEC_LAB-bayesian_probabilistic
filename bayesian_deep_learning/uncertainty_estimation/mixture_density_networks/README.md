@@ -76,7 +76,7 @@ El tamaño de la sálida de la red creada por la capa final de la MDN es (c+2)* 
 
 ### Experimentos y conclusiones
    
-Este método, en contraposición con lo validado en el Exp.I de [estimación de incertidumbre al vuelo](../uncertainty_estimation#1---al-vuelo), presentan las siguientes ventajas que se pueden resumir a mayor libertad en la definición del prior (condición de entorno o asunción dada):
+Este método, en contraposición con lo validado en el Exp.I de [estimación de incertidumbre al vuelo](../../uncertainty_estimation#1---al-vuelo), presentan las siguientes ventajas que se pueden resumir a mayor libertad en la definición del prior (condición de entorno o asunción dada):
 
  - Permite modelar facilmente que el ruido provenga de distintas familias de distribucciones.
  - Pueden modelar ruido multimodal, es decir, que no sólo provenga de una sola distribución si no de la suma de varias distribucciones de la misma familia con distintos parámetros. Este prior, sin embargo, también esta implicito en el exp.I y no es fácilmente modificable.
