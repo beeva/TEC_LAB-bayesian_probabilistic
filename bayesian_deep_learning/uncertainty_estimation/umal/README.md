@@ -6,15 +6,12 @@ En está página se explica UMAL como **solución técnica para estimar la incer
 ### Indice de contenidos
 - [Introducción a UMAL](#introduccion)
 - [¿Qué problemática resuelve UMAL?](#umal_problematica)
-- [Técnicas en las que se basa](#tecnicas-en-las-que-se-basa)
-- [Consideraciones previas de esta aproximación](#Consideraciones-previas-de-esta-aproximacion)
 - [Comparación con otras técnicas](#comparacion_tecnicas)
-
 - [Aplicaciones](#aplicaciones)
-- [FAQ](#FAQ)
 - [Modelo de implementación UMAL](#modelo_umal)
 - [Ejemplos de implementación](#implementacion)
 - [*ANEXO: Profundización téorica UMAL*](https://github.com/beeva/TEC_LAB-bayesian_probabilistic/blob/master/bayesian_deep_learning/uncertainty_estimation/umal/umal_profundizacion_teorica.md)
+- [FAQ](#FAQ)
 
 
 <a name="introduccion"></a>
